@@ -1,0 +1,339 @@
+﻿/*banner*/
+.index-banner {
+    position: relative;
+    width: 100%;
+    height: 865px;
+    overflow: hidden;
+}
+
+    .index-banner .swiper-slide {
+        position: relative;
+    }
+
+        .index-banner .swiper-slide img {
+            width: 100%;
+            height: 865px;
+        }
+
+        .index-banner .swiper-slide .slide-mask {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0,0,0,0.2);
+        }
+
+            .index-banner .swiper-slide .slide-mask .slide-words-1 {
+                margin-top: 360px;
+                font-size: 20px;
+            }
+
+            .index-banner .swiper-slide .slide-mask .slide-words-2 {
+                margin-top: 35px;
+                font-size: 50px;
+            }
+
+            .index-banner .swiper-slide .slide-mask .shop-button {
+                margin: 35px auto;
+                width: 168px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+                background-color: #2d2d2d;
+                border-radius: 50px;
+            }
+
+    .index-banner .pagination {
+        position: absolute;
+        z-index: 20;
+        bottom: 40px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .index-banner .swiper-pagination-switch {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background: #dedfdb;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .index-banner .swiper-active-switch {
+        background: #fff;
+    }
+
+/*pics*/
+.index-pics {
+    text-align: center;
+}
+
+    .index-pics .pics-title h3 {
+        margin-top: 140px;
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+    .index-pics .pics-title p {
+        margin-bottom: 140px;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #7e7e7e;
+    }
+
+    .index-pics .pics-ul {
+        margin-left: 10px;
+    }
+
+    .index-pics .pics-list {
+        position: relative;
+        float: left;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    .index-pics .pics-list-l {
+        width: 685px;
+        height: 350px;
+    }
+
+    .index-pics .pics-list-s {
+        width: 337px;
+        height: 350px;
+    }
+
+    .index-pics .pics-list .pics-list-mask {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        line-height: 350px;
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+        background-color: rgba(0,0,0,0.2);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .index-pics .pics-list:hover .pics-list-mask {
+        opacity: 1;
+    }
+/*products*/
+.index-products {
+    text-align: center;
+}
+
+    .index-products .products-title {
+        margin: 90px auto;
+        font-size: 50px;
+    }
+
+    .index-products .products-ul {
+        margin-left: 10px;
+    }
+
+    .index-products .products-ul {
+        margin-left: 10px;
+    }
+
+        .index-products .products-ul .products-list {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            width: 337px;
+            height: 462px;
+        }
+
+            .index-products .products-ul .products-list .products-img {
+                width: 337px;
+                height: 337px;
+            }
+
+                .index-products .products-ul .products-list .products-img img {
+                    max-width: 337px;
+                    max-height: 337px;
+                    vertical-align: middle;
+                }
+
+                .index-products .products-ul .products-list .products-img .icon-sale {
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    width: 50px;
+                    height: 50px;
+                    background: url(../images/p-icon-sale.png) no-repeat;
+                    z-index: 1;
+                }
+
+                .index-products .products-ul .products-list .products-img .icon-soldout {
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    width: 50px;
+                    height: 50px;
+                    background: url(../images/p-icon-soldout.png) no-repeat;
+                    z-index: 1;
+                }
+
+            .index-products .products-ul .products-list .products-type {
+                margin-top: 24px;
+                font-size: 12px;
+                color: #888888;
+            }
+
+            .index-products .products-ul .products-list .products-name {
+                margin-top: 14px;
+                font-size: 18px;
+                color: #242424;
+            }
+
+            .index-products .products-ul .products-list .products-price {
+                margin-top: 14px;
+                font-size: 14px;
+                color: #888888;
+            }
+
+                .index-products .products-ul .products-list .products-price .oldprice {
+                    text-decoration: line-through;
+                    margin-right: 10px;
+                }
+
+                .index-products .products-ul .products-list .products-price .nowprice {
+                    color: #e2574c;
+                }
+/*articles*/
+.index-articles .articles-title {
+    margin-top: 60px;
+    margin-left: 10px;
+    width: 1380px;
+    height: 106px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 106px;
+    background-color: #f2f2f2;
+}
+
+    .index-articles .articles-title span {
+        font-weight: bold;
+    }
+
+.index-articles .articles-ul .articles-list {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 453px;
+    height: 337px;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+}
+
+.index-articles .articles-ul .articles-list-1 {
+    background-image: url(../images/article-1.png);
+}
+
+.index-articles .articles-ul .articles-list-2 {
+    background-image: url(../images/article-2.png);
+}
+
+.index-articles .articles-ul .articles-list-3 {
+    background-image: url(../images/article-3.png);
+}
+
+.index-articles .articles-ul .articles-list a {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.index-articles .articles-ul .articles-list .articles-desc {
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 320px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.index-articles .articles-ul .articles-list .articles-time {
+    margin-left: 40px;
+    margin-top: 14px;
+    font-size: 14px;
+}
+/*update*/
+.index-update {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 100px;
+    width: 1380px;
+    height: 354px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+    .index-update .update-title {
+        width: 100%;
+        font-size: 50px;
+        color: #242424;
+    }
+
+        .index-update .update-title span {
+            font-weight: bold;
+        }
+
+    .index-update .update-desc {
+        margin: 0 auto;
+        margin-top: 48px;
+        width: 750px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #7e7e7e;
+    }
+
+    .index-update .email-container {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 48px;
+        width: 560px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 30px;
+        background-color: #fff;
+    }
+
+        .index-update .email-container .email {
+            position: absolute;
+            left: 30px;
+            top: 0;
+            width: 350px;
+            height: 100%;
+            font-size: 16px;
+            color: #7e7e7e;
+            border: none;
+            outline: none;
+        }
+
+        .index-update .email-container .subscribe-btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 170px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 25px;
+            background-color: #e2574c;
+            cursor: pointer;
+        }
