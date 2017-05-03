@@ -1,0 +1,1701 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <title>摇了么商户系统2.0</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/public.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!--H5编辑专用css，注意前缀即可-->
+    <!--提示菜单-->
+    <link href="Edit_css/hint.css" rel="stylesheet" />
+    <!--滑块、拖动-->
+    <link href="Edit_css/jquery-ui.min.css" rel="stylesheet" />
+    <!--取色器-->
+    <link href="Edit_css/colorpicker.css" rel="stylesheet" />
+    <!--裁剪-->
+    <link href="Edit_css/jquery.Jcrop.min.css" rel="stylesheet" />
+    <!--动画-->
+    <link href="Edit_css/swiper.animate.min.css" rel="stylesheet" />
+    <!--自定义单选复选20160123-->
+    <link href="Edit_css/icheck/minimal/red.css" rel="stylesheet" />
+    <link href="Edit_css/Edit-2.1.css" rel="stylesheet" />
+    <!--自定义的样式-->
+    <link href="Edit_css/wswm-2.1.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f7f7f7 !important;
+        }
+    </style>
+    <!--=========================== css、js 华丽分割线 ==========================================-->
+    <script src="js/jquery.js"></script>
+    <!--复选框-->
+    <script src="Edit_js/jquery.tzCheckbox.js"></script>
+    <!--滑块、拖动-->
+    <script src="Edit_js/jquery-ui.js"></script>
+    <!--下拉菜单-->
+    <script src="Edit_js/select.my-1.0.js"></script><!--20151105-->
+    <!--取色器-->
+    <script src="Edit_js/bootstrap-colorpicker.js"></script>
+    <!--裁剪-->
+    <script src="Edit_js/jquery.Jcrop.min.js"></script>
+    <!--滤镜-->
+    <script src="Edit_js/caman.full.js"></script>
+    <!--文字工具：富文本编辑器 以下2个css，3个js-->
+    <link href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Edit_css/bootstrap-wysiwyg.my.css" rel="stylesheet" />
+    <script src="Edit_js/bootstrap.min.js"></script>
+    <script src="Edit_js/jquery.hotkeys.js"></script>
+    <script src="Edit_js/bootstrap-wysiwyg.js"></script>
+    <!--自定义单选复选20160123-->
+    <script src="Edit_js/icheck.min.js"></script>
+    <!--撤销-->
+    <script src="Edit_js/undo.js"></script>
+
+    <!--自定义js-->
+    <script src="Edit_js/wswm-ajax.js"></script>
+    <script src="Edit_js/wswm-2.1.js"></script>
+    <script>
+        //和php里不同的全局变量定义在这里，方便测试
+        var templatestyle = ".";
+        var sceneId = 1;
+
+        //发布
+        function publish() {
+            window.open("./preview/publish.html");
+        }
+    </script>
+</head>
+<body class="left-side-collapsed bodyS">
+    <!--去掉onselectstart="return false"-->
+    <!-- left side start-->
+    <div class="left-side">
+        <!--logo and iconic logo start-->
+        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="" /></a></div>
+        <div class="logo-icon"><a href="index.html"><img src="images/logo1.png" alt="" /></a></div>
+        <!--logo and iconic logo end-->
+        <div class="left-side-inner">
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule1.png" /></i> <span class="fiz16">微店管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />我的微店</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />内容管理</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />模板库</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule2.png" /></i> <span class="fiz16">应用中心</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />红包</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />团购</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />刮刮乐</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />签到</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />视频类型</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />订房</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />点餐/外卖、订座</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />优惠券</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />大转盘</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />调查问卷</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />砸金蛋</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />投票</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />抢购</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />微助力</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />活动报名</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />在线游戏</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />祝福贺卡</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule3.png" /></i> <span class="fiz16">异业联盟</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />APP推广</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />活动推广</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />推广豆豆</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule4.png" /></i> <span class="fiz16">设备管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />设备绑定</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />我的设备</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule5.png" /></i> <span class="fiz16">会员管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />我的会员</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />会员积分</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule7.png" /></i> <span class="fiz16">营销学院</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />行业营销</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />营销培训</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />问题解答</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />有奖征集</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />分享赚钱</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />微商培训</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />广告位</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule6.png" /></i> <span class="fiz16">效果分析</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />浏览统计</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />浏览分析</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule8.png" /></i> <span class="fiz16">物料下载</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />海报图册</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />张贴图案</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a href="#"><i class="faa"><img src="images/bule9.png" /></i> <span class="fiz16">我的资料</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="#"><img src="images/vicon1.png" />基础资料</a></li>
+                        <li><a href="#"><img src="images/vicon1.png" />联系信息</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- left side end-->
+    <!-- main content start-->
+    <div class="main-content" style="background: #cfcfcf">
+        <!--20151105 这一行修改了style-->
+        <div class="title">
+            <div class="fla"><a class="toggle-btn"><img src="images/s3.png" /></a></div>
+            <div class="wlcom">
+                <h1><img src="images/s4.png" /><div class="xia">4</div></h1>
+                <h1><img src="images/s5.png" /><div class="xi">4</div></h1>
+                <h2 style="background:none;"> <a id="popModal_ex2" href="javascript:" style="display:block; height:61px;"><span style="font-size:14px;">万商维盟</span></a></h2>
+            </div>
+            <div style="display:none">
+                <div id="content1">
+                    <ul class="topu">
+                        <li><a href="javascript:;" class="n1">上次登录：2014-12-12 18:30</a></li>
+                        <li><a href="javascript:;" class="n3">修改资料</a></li>
+                        <li><a href="javascript:;" class="n4 nobor">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="listop" style=" height: 45px; line-height: 45px;">
+            <!--20151105 删除以下注释部分-->
+            <!--<h1>微店管理</h1>
+            <ul>
+                <li><a href="#" class="a1">全部</a></li>
+                <li><a href="#">普通模板</a></li>
+                <li><a href="#">html5模板</a></li>
+            </ul>-->
+            <ol class="Edit_cofig">
+                <li><a href="#" class="my">作品</a></li>
+                <li><a onclick="saveAll()" class="save">保存</a></li>
+                <li><a onclick="preview()" class="power">预览</a></li>
+                <li><a onclick="publish()" class="fabu">发布</a></li>
+            </ol>
+        </div>
+        <div class="clear"></div>
+        <!--H5编辑开始-->
+        <div class="Edit_main" style="height:1000px;">
+            <!--left-->
+            <div class="Edit_left">
+                <ul>
+                    <!-------------------------------------------------------------
+                        在左侧导航里，每一页都放在一个li，结构如下面的注释
+                    -------------------------------------------------------------->
+                    <!--<li>
+                        <div class="num">1</div>
+                        <div class="pageList_content">
+                            <div class="swiper-slide">
+
+                                <div class="page-background" bg-url="Edit_img/a15.jpg" style="background-image: url(Edit_img/a15.jpg); background-color:rgba(0,0,0,0)"></div>
+
+                                <div class="el-box ani" style="width: 200px; height: 250px; position: absolute; left: 60px; top: 20px; z-index: 1;" swiper-animate-effect="zoomIn" swiper-animate-delay="0s" swiper-animate-count="2">
+                                    <div class="el-box-mid">
+                                        <div id="1001" class="el-box-contents" ctype="1">
+                                            <img src="Edit_img/a11.jpg" style="width:100%;height:100%;" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="el-box ani" style="width: 230px; height: 120px; position: absolute; left: 50px; top: 300px; z-index: 2;" swiper-animate-effect="flipInY" swiper-animate-duration="2s" swiper-animate-delay="0s" swiper-animate-count="infinite">
+                                    <div class="el-box-mid">
+                                        <div id="1002" class="el-box-contents" ctype="2" style="line-height: 2; font-size: 14px; font-family: 黑体;">
+                                            大家好!我叫贺谦,不要以为我是个男孩子啊,我可是个可爱的小女生哦,来源于“谦受益，,满招损”,爸爸妈妈希望我在谦虚中不断成长进步!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="copy">复制</a><a class="del">删除</a>
+                        </div>
+
+                    </li>-->
+
+                </ul>
+                <div class="addpage"><a onclick="addOnePage()">+</a></div>
+            </div>
+            <!--left end-->
+            <!--center-->
+            <div class="Edit_center">
+                <div id="phoneBox" class="swiper-slide swiper-slide-active">
+                    <!--********************这是中间编辑的部分，由后台生成*******************-->
+                    <!--背景图-->
+                    <!--<div class="page-background" bg-url="Edit_img/a15.jpg" style="background-image: url(Edit_img/a15.jpg); background-color:rgba(0,0,0,0)"></div>-->
+                    <!--元素1-->
+                    <!--<div class="el-box ani" style="width: 200px; height: 250px; position: absolute; left: 60px; top: 20px; z-index: 1;" swiper-animate-effect="zoomIn" swiper-animate-delay="0s" swiper-animate-count="2">
+                        <div class="el-box-mid">
+                            <div id="1001" class="el-box-contents" ctype="1">
+                                <img src="Edit_img/a11.jpg" style="width:100%;height:100%;" />
+                            </div>
+                        </div>
+                    </div>-->
+                    <!--元素2-->
+                    <!--<div class="el-box ani" style="width: 230px; height: 120px; position: absolute; left: 50px; top: 300px; z-index: 2;" swiper-animate-effect="flipInY" swiper-animate-duration="2s" swiper-animate-delay="0s" swiper-animate-count="infinite">
+                        <div class="el-box-mid">
+                            <div id="1002" class="el-box-contents" ctype="2" style="line-height: 2; font-size: 14px; font-family: 黑体;">
+                                大家好!我叫贺谦,不要以为我是个男孩子啊,我可是个可爱的小女生哦,来源于“谦受益，,满招损”,爸爸妈妈希望我在谦虚中不断成长进步!
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+                <ul class="next_pre">
+                    <li onclick="changePrev()"><a>上<br />一<br />页</a></li>
+                    <li onclick="changeNext()"><a>下<br />一<br />页</a></li>
+                </ul>
+                <!--20151105 修改下面ul-->
+                <ul class="chehui">
+                    <!--如果是不可操作的项目，如同‘恢复选项’应用cx2,fh2项目。可操作为：cx,fh-->
+                    <!--<li><a class="cx2 hint--top hint--rounded" data-hint="撤销" onclick="undoAction()" id="undo">撤<br />销</a></li>
+                    <li><a class="fh2 hint--top hint--rounded" data-hint="恢复" onclick="redoAction()" id="redo">恢<br />复</a></li>-->
+                    <li><a class="cx hint--top hint--rounded" data-hint="背景设置" onclick="showBgImgReplaceDialog()">背<br />景</a></li>
+                    <li><a class="fh hint--top hint--rounded" data-hint="设置音乐" onclick="showMscReplaceDialog()">音<br />乐</a></li>
+                </ul>
+                <ul class="save_power">
+                    <li><a class="bc hint--top hint--rounded" data-hint="保存" onclick="savePage('ture')"></a></li>
+                    <li><a class="yl hint--top hint--rounded" data-hint="预览本页面" onclick="previewNowPage()"></a></li>
+                </ul>
+            </div>
+            <!--center end-->
+            <!--right-->
+            <div class="Edit_right">
+                <ul>
+                    <li onclick="showBanShi()"><a class="a1 hint--left hint--rounded" data-hint="更换版式">版式</a></li>
+                    <li onclick="addWordsToScene()"><a class="a2 hint--left hint--rounded" data-hint="添加文字">文字</a></li>
+                    <li onclick="showImgAddDialog()"><a class="a3 hint--left hint--rounded" data-hint="添加图片">图片</a></li>
+                    <li onclick="showEditBg()"><a class="a4 hint--left hint--rounded" data-hint="更换背景">背景</a></li>
+                    <li onclick="showEditMusic()"><a class="a5 hint--left hint--rounded" data-hint="选择音乐">音乐</a></li>
+                    <li onclick="showAddVideo()"><a class="a6 hint--left hint--rounded" data-hint="添加视频">视频</a></li>
+                    <li>
+                        <a class="a7">表单</a>
+                        <div class="popover right">
+                            <div class="arrow"></div>
+                            <div class="popover-content" style="display: inline-block;">
+                                <ul class="menus">
+                                    <li class="menu-item textarea hint--left hint--rounded " data-hint="点击添加输入框" onclick="showAddInput();"><span class="menu-item-name">输入框</span></li>
+                                    <!--
+                                        <li class="menu-item hint--left hint--rounded " data-hint="点击添加单选按钮" onclick="createComp('r');"><span class="menu-item-name">单选</span></li>
+                                    <li class="menu-item hint--left hint--rounded " data-hint="点击添加多选按钮" onclick="createComp('c');"><span class="menu-item-name">多选</span></li>
+                                    <li class="menu-item hint--left hint--rounded " data-hint="点击添加多选按钮" onclick="createComp('z');"><span class="menu-item-name">下拉列表</span></li>
+                                        -->
+                                    <li class="menu-item hint--left hint--rounded " data-hint="点击添加提交按钮" onclick="showAddSubmitBtn();"><span class="menu-item-name">提交按钮</span></li>
+                                    <li class="menu-item hint--left hint--rounded " data-hint="点击添加一键拨号" onclick="showAddTelBtn();"><span class="menu-item-name">一键拨号</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li onclick="showEditConfig()"><a class="a8 hint--left hint--rounded" data-hint="设置相关选项">设置</a></li>
+                </ul>
+            </div>
+            <!--right end-->
+        </div>
+
+
+
+        <!--H5编辑end-->
+    </div>
+    <!-- main content end-->
+    <!--
+         ==========================================================================
+                              20151215 修改右侧的样式动画操作面板
+         id="edit_style_ani" 的div，改动较大，若没有加上程序和自定义属性，可直接替换
+         ==========================================================================
+    -->
+    <!--样式、动画弹出窗口-->
+    <div id="edit_style_ani" class="edit_sty_ani panel el_hide" style="position:absolute;right:130px;top:136px;">
+        <ul id="myTab1" class="tab">
+            <li id="styleTab0" class="current" style="left:5px;" onclick="nTabs(this,0);">样式</li><!--文字-->
+            <li id="aniTab" style="left:134px;" onclick="nTabs(this,1);">动画</li>
+        </ul>
+        <div class="content">
+            <ol id="myTab1_Content0">
+                <!-- ===============================
+                     删除：文字编辑、字体、字号对齐
+                     =============================== -->
+                <div class="menu">基础样式</div> <!--20151215增加 修改右侧操作面板-->
+                <div class="bgfff">
+                    <table width="225" border="0" cellspacing="0" cellpadding="0">
+                        <!--20151215修改 修改右侧操作面板-->
+                        <tr>
+                            <td>
+                                <div class="text_col">
+                                    <h1>文本颜色</h1>
+                                    <div class="z">
+                                        <div class="l" id="fontColorEdit" data-color-format="rgba" model="color"></div>
+                                        <div class="r"><input type="text" value="#f00000" readonly=readonly /></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="text_col">
+                                    <h1>背景颜色</h1>
+                                    <div class="z">
+                                        <div class="l" id="bgColorEdit" data-color-format="rgba" model="background-color"></div>
+                                        <div class="r"><input type="text" value="#f00000" readonly=readonly /></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">旋转</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <!--20151215 修改id-->
+                                            <div class='uiSlider' id="rotateEdit" min="0" max="360" step="1" value="0" model="transform"></div>
+                                            <input class="uiSlider_value" type="number" min="0" max="360" step="1" value="0" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">行高</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="lineHeightEdit" min="1" max="3" step="0.1" value="1" model="line-height"></div>
+                                            <input class="uiSlider_value" type="number" min="1" max="3.0" step="0.1" value="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">边距</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="paddingTopEdit" min="0" max="20" step="1" value="0" model="padding-top"></div>
+                                            <input class="uiSlider_value" type="number" min="0" max="20" step="1" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">透明度</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="opacityEdit" min="0" max="100" step="1" value="0" model="opacity"></div>
+                                            <input class="uiSlider_value" type="number" min="0" max="100" step="1" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="menu">边框样式</div>
+                <div class="bgfff el_hide">
+                    <table width="225" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">尺寸</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="borderWidthEdit" min="0" max="20" step="1" value="0" model="border-width"></div>
+                                            <input class="uiSlider_value" type="number" min="0" max="20" step="1" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">弧度</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="borderRadiusEdit" min="0" max="100" step="1" value="0" model="border-radius"></div>
+                                            <input class="uiSlider_value" type="number" min="0" max="100" step="1" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">样式</div>
+                                    <div class="r">
+                                        <select name="size" id="borderStyleEdit">
+                                            <option value="solid" selected="selected">直线</option>
+                                            <option value="dashed">破折线</option>
+                                            <option value="dotted">点状线</option>
+                                            <option value="double">双划线</option>
+                                            <option value="groove">3D凹槽</option>
+                                            <option value="ridge">3D垄状</option>
+                                            <option value="inset">3D内嵌</option>
+                                            <option value="outset">3D外嵌</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="text_col">
+                                    <h1>颜色</h1>
+                                    <div class="z">
+                                        <div class="l" id="borderColorEdit" data-color-format="rgba" model="border-color"></div>
+                                        <div class="r"><input type="text" value="#f00000" readonly=readonly /></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="menu">阴影样式</div>
+                <div class="bgfff el_hide">
+                    <table width="225" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">大小</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="boxShadowSizeEdit" min="0" max="10" step="1" value="0" model="boxShadowSize"></div>
+                                            <input class="uiSlider_value" type="number" min="0" max="10" step="1" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">模糊</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="boxShadowBlurEdit" min="0" max="20" step="1" value="0" model="boxShadowBlur"></div>
+                                            <input class="uiSlider_value" type="number" min="0" max="20" step="1" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">横向偏移</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="boxShadowXEdit" min="-100" max="100" step="1" value="0" model="boxShadowX"></div>
+                                            <input class="uiSlider_value" type="number" min="-100" max="100" step="1" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="borradius">
+                                    <div class="l">纵向偏移</div><div class="r">
+                                        <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                            <div class='uiSlider' id="boxShadowYEdit" min="-100" max="100" step="1" value="0" model="boxShadowY"></div>
+                                            <input class="uiSlider_value" type="number" min="-100" max="100" step="1" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="text_col">
+                                    <h1>颜色</h1>
+                                    <div class="z">
+                                        <div class="l" id="boxShadowColorEdit" data-color-format="rgba" model="boxShadowColor"></div>
+                                        <div class="r"><input type="text" value="#f00000" readonly=readonly /></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="menu lj">图片滤镜</div>
+                <div class="bgfff el_hide">
+                    <table width="225" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ul class="texiao">
+                                        <li>
+                                            <img data-effect="normal" src="Edit_img/lvjing/normal.jpg" />
+                                        </li>
+                                        <li>
+                                            <img data-effect="vintage" src="Edit_img/lvjing/vintage.jpg" />
+                                        </li>
+                                        <li class="qc">
+                                            <img data-effect="sunrise" src="Edit_img/lvjing/sunrise.jpg" />
+                                        </li>
+                                        <li>
+                                            <img data-effect="orangePeel" src="Edit_img/lvjing/orangePeel.jpg" />
+                                        </li>
+                                        <li>
+                                            <img data-effect="herMajesty" src="Edit_img/lvjing/herMajesty.jpg" />
+                                        </li>
+                                        <li class="qc">
+                                            <img data-effect="love" src="Edit_img/lvjing/love.jpg" />
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="b_btn" style="position: absolute; left: 0px; bottom: 0px;">
+                    <li><a href="javascript:void(0)" class="a1" onclick="hideYangShi_Ani()">确定</a></li>
+                    <li class="marnone"><a href="javascript:void(0)" class="a2" onclick="clearStyle()">清除样式</a></li>
+                </ul>
+            </ol>
+            <ol id="myTab1_Content1" class="none">
+                <!--20151215 id改了-->
+                <table width="225" border="0" cellspacing="0" cellpadding="0" style="margin: 15px auto -15px auto; ">
+
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">效果</div><div class="r">
+                                    <!--20151105 begin 替换select-->
+                                    <select name="donghua" id="donghua">
+                                        <option value="none" data-type="0">无</option>
+                                        <optgroup label="进入">
+
+                                            <option value="fadeIn" data-type="19" selected=selected>淡入</option>
+                                            <option value="bounceIn" data-type="9">弹入</option>
+                                            <option value="slideInLeft" data-type="29">滑动进入</option>
+                                            <option value="flipInY" data-type="37">翻转进入</option>
+                                            <option value="lightSpeedIn" data-type="39">光速进入</option>
+                                            <option value="zoomIn" data-type="41">中心放大</option>
+                                            <option value="rotateIn" data-type="43">旋转进入</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="强调">
+                                            <option value="bounce" data-type="1">弹跳</option>
+                                            <option value="flash" data-type="2">闪动</option>
+                                            <option value="pulse" data-type="3">脉动</option>
+                                            <option value="rubberBand" data-type="4">抖动</option>
+                                            <option value="shake" data-type="5">摇动</option>
+                                            <option value="swing" data-type="6">摆动</option>
+                                            <option value="tada" data-type="7">晃动</option>
+                                            <option value="wobble" data-type="8">大幅晃动</option>
+                                        </optgroup>
+
+                                        <optgroup label="退出">
+                                            <option value="fadeOut" data-type="24">淡出</option>
+                                            <option value="bounceOut" data-type="14">弹出</option>
+                                            <option value="slideOutLeft" data-type="33">滑动离开</option>
+                                            <option value="flipOutY" data-type="38">翻转离开</option>
+                                            <option value="lightSpeedOut" data-type="40">光速离开</option>
+                                            <option value="zoomOut" data-type="42">中心缩小</option>
+                                            <option value="rotateOut" data-type="44">旋转离开</option>
+                                        </optgroup>
+                                    </select>
+                                    <!--20151105 end 替换select-->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="directionTr">
+                        <td>
+                            <div class="borradius">
+                                <div class="l">方向</div><div class="r">
+                                    <select name="fangxiang" id="fangxiang">
+                                        <option value="Left" selected="selected">从左向右</option>
+                                        <option value="Right">从右向左</option>
+                                        <option value="Up">从下到上</option>
+                                        <option value="Down">从上到下</option>
+                                        <option value="Center">中心变化</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">时间</div><div class="r">
+                                    <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                        <div class='uiSlider' min="0.5" max="10" step="0.1" value="" model="animate-duration"></div>
+                                        <!--20151105 div改为input-->
+                                        <input class="uiSlider_value" type="number" min="0.5" max="10" step="0.1" value="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">延迟</div><div class="r">
+                                    <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                        <div class='uiSlider' min="0" max="10" step="0.1" value="" model="animate-delay"></div>
+                                        <!--20151105 div改为input-->
+                                        <input class="uiSlider_value" type="number" min="0" max="10" step="0.1" value="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">次数</div><div class="r">
+                                    <div style="width:150px; position: relative; left:15px;display:inline-block;">
+                                        <div class='uiSlider' id="aniCountEdit" min="1" max="10" step="1" value="" model="animate-count"></div>
+                                        <!--20151105 div改为input-->
+                                        <input class="uiSlider_value" type="number" min="1" max="10" step="1" value="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="ch_effects" name="ch_effects" data-on="是" data-off="否" checked="checked" />
+                            <label for="ch_effects" style="margin-left:15px;">循环</label>
+                        </td>
+                    </tr>
+                </table>
+                <ul class="b_btn" style="position: absolute; left: 0px; bottom: 0px;">
+                    <li><a href="javascript:void(0)" class="a1" onclick="hideYangShi_Ani()">确定</a></li>
+                    <li class="marnone"><a href="javascript:void(0)" class="a2" onclick="resetAniOption()">重置动画</a></li>
+                </ul>
+            </ol>
+
+        </div>
+    </div>
+    <!--样式、动画弹出窗口结束-->
+    <!--版式弹出窗口开始-->
+    <div id="edit_banshi" class="edit_banshi panel el_hide" style="position: absolute; right: 130px; top: 120px;">
+        <ul id="myTab2" class="tab">
+            <li class="current" onclick="nTabs(this,0);">单图</li>
+            <li onclick="nTabs(this,1);">多图</li>
+            <li onclick="nTabs(this,2);">图集</li>
+            <li onclick="nTabs(this,3);">高级</li>
+        </ul>
+        <div class="content">
+            <ol id="myTab2_Content0">
+                <ul class="bslist">
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad1.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad2.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad3.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                </ul>
+            </ol>
+            <ol id="myTab2_Content1" class="none">
+                <ul class="bslist">
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad1.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad2.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad3.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                </ul>
+            </ol>
+            <ol id="myTab2_Content2" class="none">
+                <ul class="bslist">
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad1.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad2.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad3.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                </ul>
+            </ol>
+            <ol id="myTab2_Content3" class="none">
+                <ul class="edit_menu"><li><a href="#">互动表单</a></li><li><a href="#">活动</a></li><li><a href="#">导航</a></li><li><a href="#">抢红包</a></li><li><a href="#">其他</a></li><li><a href="#">互动表单</a></li><li><a href="#">互动表单</a></li></ul>
+                <ul class="bslist">
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad1.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad2.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad3.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad4.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)"><img src="Edit_img/ad5.jpg" /></li>
+                    <li tpl_id="1283" onclick="insertPageTpl(this)" class="qc"><img src="Edit_img/ad6.jpg" /></li>
+                </ul>
+            </ol>
+        </div>
+    </div>
+    <!--版式弹出窗口结束-->
+    <!--更换图片弹窗开始-->
+    <div id="changeimg" class="changeimg el_hide" style="margin:0px auto;">
+        <!--弹窗-->
+        <div class="newtc el_hide"><h2>新建分组</h2><div class="close" onclick="hideXjfz()">关闭</div><input type="text" class="input3" placeholder="分组名称" /><div class="qrxz" style="margin:19px auto 0;float:none;"><a onclick="confirmXjfz()">确认增加</a></div></div>
+        <!--end-->
+        <div class="close" onclick="hideImgDialog()">关闭</div>
+        <ul id="myTab4" class="tab">
+            <h1>更换图片</h1>
+            <li class="current" onclick="nTabs(this,0);">图片素材库</li>
+            <li onclick="nTabs(this,1);">我的图片</li>
+        </ul>
+        <div class="content">
+            <ol id="myTab4_Content0">
+                <ul class="edit_imenu">
+                    <li><a href="#">最新</a></li>
+                    <li><a href="#">节日</a></li>
+                    <li><a href="#">祝福</a></li>
+                    <li><a href="#" class="cur">风格</a></li>
+                    <li><a href="#">企业</a></li>
+                    <li><a href="#">行业</a></li>
+                </ul>
+                <ul class="imglist">
+                    <li class="cur"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="manu" style="margin-top:7px;"><span class="disabled"> <  首页</span><span class="disabled"> <  上一页</span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a>...<a href="#?page=200">200</a><a href="#?page=2">下一页  > </a></div>
+                <div class="upload"><a href="#">上传图片</a></div>
+                <div class="qrxz"><a>确认选择</a></div>
+            </ol>
+            <ol id="myTab4_Content1" class="none">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="230"><select name="fenlei" id="fenlei"><option value="微软雅黑" selected="selected">选择分类进行查看</option><option value="Arile">分类一</option><option value="Italiano">分类一</option><option value="Polski">分类一</option></select></td>
+                        <td><div class="newj"><a onclick="showXjfz()">新建分组</a></div></td>
+                        <td align="right"><a id="manageImg" onclick="manageImg()" style="color:#2081c5;">管理图片</a></td>
+                    </tr>
+                </table>
+                <ul class="imglist">
+                    <li class="cur"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="manu" style="margin-top:7px;"><span class="disabled"> <  首页</span><span class="disabled"> <  上一页</span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a>...<a href="#?page=200">200</a><a href="#?page=2">下一页  > </a></div>
+                <div class="upload"><a href="#">上传图片</a></div>
+                <div class="qrxz"><a>确认选择</a></div>
+                <div class="delpic el_hide"><a>删除选中</a></div>
+            </ol>
+        </div>
+    </div>
+    <!--更换图片弹窗结束-->
+    <!--裁剪图片弹窗开始-->
+    <div id="cutimg" class="cutimg el_hide" style="margin:0px auto;">
+        <div class="close" onclick="hideImgCutDialog()">关闭</div>
+        <div class="tab"><h1>裁剪</h1></div>
+        <div class="content">
+            <div class="zong" id="radiolist">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" valign="middle" class="l">
+                            <!--裁剪用-->
+                            <div id="jcropCon" style="position:absolute;left:50%;top:50%;">
+                            </div>
+                            <div id="cropInfo">
+                                <input type="hidden" id="src" name="src" />
+                                <input type="hidden" id="x" name="x" />
+                                <input type="hidden" id="y" name="y" />
+                                <input type="hidden" id="w" name="w" />
+                                <input type="hidden" id="h" name="h" />
+                            </div>
+                            <!--裁剪用-->
+                        </td>
+                        <td class="r">
+                            <input id="ratio0" name='cropSize' type="radio" value="0" checked="checked" /><label for="ratio0">原图比例</label><br /><br />
+                            <input id="ratio1" name='cropSize' type="radio" value="1" /><label for="ratio1">1：1</label><br /><br />
+                            <input id="ratio2" name='cropSize' type="radio" value="2" /><label for="ratio2">4：3</label><br /><br />
+                            <input id="ratio3" name='cropSize' type="radio" value="3" /><label for="ratio3">3：4</label><br /><br />
+                            <input id="ratio4" name='cropSize' type="radio" value="4" /><label for="ratio4">标准屏比例</label><br /><br />
+                            <input id="ratio5" name='cropSize' type="radio" value="5" /><label for="ratio5">1/2屏比例</label><br /><br />
+                            <input id="ratio6" name='cropSize' type="radio" value="6" /><label for="ratio6">1/3屏比例</label><br /><br />
+                            <input id="ratio7" name='cropSize' type="radio" value="7" /><label for="ratio7">自定义</label>
+                            <input id="lockRatio" type="checkbox" /><label class="hCheckbox" for="lockRatio">锁定</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="qrxz" style="margin:15px auto 0;float:none;"><a>确认裁剪</a></div>
+        </div>
+    </div>
+    <!--裁剪图片弹窗结束-->
+    <!--背景弹出窗口开始-->
+    <div id="edit_bg" class="edit_bg panel el_hide" style="position: absolute; right: 130px; top: 120px;">
+        <ul class="tab">
+            <li class="current">样式</li>
+        </ul>
+        <div class="content">
+            <ol>
+                <table width="225" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td colspan="2">
+                            <div class="text_col">
+                                <h1>背景颜色</h1>
+                                <div class="z">
+                                    <div class="l" id="slideBgColorEdit" data-color-format="rgba" model="background-color"></div>
+                                    <div class="r"><input type="text" value="#f00000" readonly=readonly /></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" class="imginput1" value="更换背景" onclick="showBgImgReplaceDialog()" /></td>
+                        <td align="right"><input type="submit" class="imginput2" value="裁剪背景" onclick="showBgImgCutDialog()" /></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-bottom:0px;"><input type="submit" class="imginput3" value="删除背景" onclick="deleteSceneBg()" /></td>
+                        <td style="padding-bottom:0px;" align="right"><input type="reset" class="edit_input1" value="清除样式" onclick="clearBgStyle()" /></td>
+                    </tr>
+                </table>
+                <!--20160123 增加以下div-->
+                <div class="bgEffect">
+                    <div style="height:30px;line-height:30px;font-size:12px;">效果</div>
+                    <input type="button" class="imginput1" style="width: 72px; cursor: pointer;" value="放大" onclick="setBgEffect(1)" />
+                    <input type="button" class="imginput2" style="width: 72px; cursor: pointer;" value="缩小" onclick="setBgEffect(2)" />
+                    <input type="button" class="imginput3" style="width: 72px; cursor: pointer;" value="删除" onclick="setBgEffect(0)" />
+                </div>
+            </ol>
+        </div>
+    </div>
+    <!--背景弹窗窗口结束-->
+    <!--更换背景弹窗开始-->
+    <div id="changebg" class="changebg el_hide" style="margin:0px auto;">
+        <!--弹窗-->
+        <div class="newtc el_hide"><h2>新建分组<div class="close">关闭</div></h2><input type="text" class="input3" placeholder="分组名称" /><div class="qrxz" style="margin:19px auto 0;float:none;"><a href="#">确认增加</a></div></div>
+        <!--end-->
+        <div class="close" onclick="hideBgImgDialog()">关闭</div>
+        <ul id="myTab5" class="tab">
+            <h1>更换背景</h1>
+            <li class="current" onclick="nTabs(this,0);">背景素材库</li>
+            <li onclick="nTabs(this,1);">我的背景</li>
+        </ul>
+        <div class="content">
+            <ol id="myTab5_Content0">
+                <ul class="edit_imenu">
+                    <li><a href="#">最新</a></li>
+                    <li><a href="#">节日</a></li>
+                    <li><a href="#">祝福</a></li>
+                    <li><a href="#" class="cur">风格</a></li>
+                    <li><a href="#">企业</a></li>
+                    <li><a href="#">行业</a></li>
+                </ul>
+                <ul class="imglist">
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="cur"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="manu" style="margin-top:7px;"><span class="disabled"> <  首页</span><span class="disabled"> <  上一页</span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a>...<a href="#?page=200">200</a><a href="#?page=2">下一页  > </a></div>
+                <div class="upload"><a href="#">上传图片</a></div>
+                <div class="qrxz"><a href="#">确认选择</a></div>
+            </ol>
+            <ol id="myTab5_Content1" class="none">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="230"><select name="fenlei2" id="fenlei2"><option value="微软雅黑" selected="selected">选择分类进行查看</option><option value="Arile">分类一</option><option value="Italiano">分类一</option><option value="Polski">分类一</option></select></td>
+                        <td><div class="newj"><a href="#">新建分组</a></div></td>
+                        <td align="right"><a href="#" style="color:#2081c5;">管理图片</a></td>
+                    </tr>
+                </table>
+                <ul class="imglist">
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /><h2></h2></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /><h2 class="cur"></h2></li>
+                    <li class="cur"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                    <li class="qc"><img src="Edit_img/ad8.png" data-src="Edit_img/ad8.png" /></li>
+                </ul>
+                <div class="clear"></div>
+                <!--修改了manu style 20151215-->
+                <div class="manu" style="margin-top:7px;"><span class="disabled"> <  首页</span><span class="disabled"> <  上一页</span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a>...<a href="#?page=200">200</a><a href="#?page=2">下一页  > </a></div>
+                <div class="upload"><a href="#">上传图片</a></div>
+                <div class="qrxz"><a href="#">确认选择</a></div><!--如果是选择的管理图片这里的按钮为删除按钮<div class="delpic"><a href="#">删除选中</a></div>-->
+            </ol>
+        </div>
+    </div>
+    <!--更换背景弹窗结束-->
+    <!--音乐弹出窗口开始-->
+    <!--修改了edit_music top 20151215-->
+    <div id="edit_music" class="edit_music panel el_hide" style="position: absolute; right: 130px; top: 120px;">
+        <ul id="myTab6" class="tab">
+            <li class="current" onclick="nTabs(this,0);">背景音乐</li>
+        </ul>
+        <div class="content">
+            <ol id="myTab6_Content0">
+                <!--修改了width 20151215-->
+                <table width="225" border="0" cellspacing="0" cellpadding="0" class="mar15">
+                    <tr>
+                        <td>
+                            <div class="yyk">
+                                <!--20151105 修改音乐输入框为不可输入，可点击-->
+                                <input type="text" class="input4" value="小夜曲.mp3" readonly=readonly onclick="$('#edit_music input.imginput1')[0].click()" title="点击选择音乐" />
+                                <div class="del" onclick="delBgMsc()"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!--注释掉以下 20151215-->
+                    <!--
+                    <tr>
+                        <td style="padding-bottom:0px;">
+                            <input type="submit" class="imginput1" value="更换音乐" />
+                        </td>
+                    </tr>
+                    -->
+                </table>
+            </ol>
+            <!--增加ul 20151215-->
+            <ul class="b_btn">
+                <li><a href="javascript:void(0)" class="a1" onclick="hideEditMusic()">确定</a></li>
+                <li class="marnone"><a href="javascript:void(0)" class="a2" onclick="delBgMsc()">清除音乐</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--音乐弹窗窗口结束-->
+    <!--更换音乐弹窗开始-->
+    <div id="changemusic" class="changemusic el_hide" style="margin:0px auto;">
+        <!--播放器-->
+        <audio id="stPlayer" src="" loop=loop data-name="暂无背景音乐"></audio>
+        <!--弹窗-->
+        <div class="newtc el_hide"><h2>新建分组<div class="close">关闭</div></h2><input type="text" class="input3" placeholder="分组名称" /><div class="qrxz" style="margin:19px auto 0;float:none;"><a href="#">确认增加</a></div></div>
+        <!--end-->
+        <div class="close" onclick="hideMscDialog()">关闭</div>
+        <ul id="myTab7" class="tab">
+            <h1>更换音乐</h1>
+            <li class="current" onclick="nTabs(this,0);">音乐素材库</li>
+            <li onclick="nTabs(this,1);">我的音乐</li>
+        </ul>
+        <div class="content">
+            <ol id="myTab7_Content0">
+                <ul class="edit_imenu">
+                    <li><a href="#">最新</a></li>
+                    <li><a href="#">节日</a></li>
+                    <li><a href="#">祝福</a></li>
+                    <li><a href="#" class="cur">风格</a></li>
+                    <li><a href="#">企业</a></li>
+                    <li><a href="#">行业</a></li>
+                </ul>
+                <ul class="music_list">
+                    <table width="800" border="0" cellspacing="0" cellpadding="12" style="margin-top:15px;" class="stripe">
+                        <tr>
+                            <td width="22"><input name='r' type="radio" data-src="Edit_mp3/4.mp3" /></td>
+                            <td width="527">经典 渔舟唱晚 - 古筝版纯音乐.mp3</td>
+                            <td width="136" class="dxcol">100Kb</td>
+                            <td width="19"><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><input name='r' type="radio" data-src="Edit_mp3/1.mp3" /></td>
+                            <td>美好 梁祝 - 钢琴版纯音乐.mp3</td>
+                            <td class="dxcol">80Kb</td>
+                            <td><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><input name='r' type="radio" data-src="Edit_mp3/2.mp3" /></td>
+                            <td>经典 渔舟唱晚 - 古筝版纯音乐.mp3 </td>
+                            <td class="dxcol">100Kb</td>
+                            <td><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><input name='r' type="radio" data-src="Edit_mp3/3.mp3" /></td>
+                            <td>美好 梁祝 - 钢琴版纯音乐.mp3</td>
+                            <td class="dxcol">80Kb</td>
+                            <td><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><input name='r' type="radio" data-src="Edit_mp3/4.mp3" /></td>
+                            <td>经典 渔舟唱晚 - 古筝版纯音乐.mp3</td>
+                            <td class="dxcol">100Kb</td>
+                            <td><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><input name='r' type="radio" data-src="Edit_mp3/1.mp3" /></td>
+                            <td>经典 渔舟唱晚 - 古筝版纯音乐.mp3</td>
+                            <td class="dxcol">80Kb</td>
+                            <td><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><input name='r' type="radio" data-src="Edit_mp3/2.mp3" /></td>
+                            <td>美好 梁祝 - 钢琴版纯音乐.mp3</td>
+                            <td class="dxcol">100Kb</td>
+                            <td><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><input name='r' type="radio" data-src="Edit_mp3/3.mp3" /></td>
+                            <td>经典 渔舟唱晚 - 古筝版纯音乐.mp3 </td>
+                            <td class="dxcol">100Kb</td>
+                            <td><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><input name='r' type="radio" data-src="Edit_mp3/4.mp3" /></td>
+                            <td>美好 梁祝 - 钢琴版纯音乐.mp3</td>
+                            <td class="dxcol">100Kb</td>
+                            <td><img src="Edit_img/music_p.png" /></td>
+
+                        </tr>
+                    </table>
+                </ul>
+                <div class="clear"></div>
+                <!--修改了manu style 20151215-->
+                <div class="manu" style="margin-top:7px;"><span class="disabled"> <  首页</span><span class="disabled"> <  上一页</span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a>...<a href="#?page=200">200</a><a href="#?page=2">下一页  > </a></div>
+                <div class="upload"><a href="#">上传音乐</a></div>
+                <div class="qrxz"><a onclick="confirmMsc()">确认选择</a></div>
+            </ol>
+            <ol id="myTab7_Content1" class="none">
+                <!--20151216  增加该table-->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td align="right" style="background:#fff;border-bottom:#EEEEEE 1px solid;">
+                                <a id="manageMsc" onclick="manageMsc()" style="color:#2081c5;font-size:14px;">管理音乐</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="musicMyList">
+                    <ul class="music_list">
+                        <table width="800" border="0" cellspacing="0" cellpadding="12" class="stripe">
+                            <tr>
+                                <td width="22"><input name='r' type="radio" data-src="Edit_mp3/4.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td width="527">经典 渔舟唱晚 - 古筝版纯音乐.mp3</td>
+                                <td width="136" class="dxcol">100Kb</td>
+                                <td width="19"><img src="Edit_img/music_p.png" /></td>
+
+                            </tr>
+                            <tr>
+                                <td><input name='r' type="radio" data-src="Edit_mp3/1.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td>美好 梁祝 - 钢琴版纯音乐.mp3</td>
+                                <td class="dxcol">80Kb</td>
+                                <td><img src="Edit_img/music_p.png" /></td>
+
+                            </tr>
+                            <tr>
+                                <td><input name='r' type="radio" data-src="Edit_mp3/2.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td>经典 渔舟唱晚 - 古筝版纯音乐.mp3 </td>
+                                <td class="dxcol">100Kb</td>
+                                <td><img src="Edit_img/music_p.png" /></td>
+
+                            </tr>
+                            <tr>
+                                <td><input name='r' type="radio" data-src="Edit_mp3/3.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td>美好 梁祝 - 钢琴版纯音乐.mp3</td>
+                                <td class="dxcol">80Kb</td>
+                                <td><img src="Edit_img/music_p.png" /></td>
+
+                            </tr>
+                            <tr>
+                                <td><input name='r' type="radio" data-src="Edit_mp3/4.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td>经典 渔舟唱晚 - 古筝版纯音乐.mp3</td>
+                                <td class="dxcol">100Kb</td>
+                                <td><img src="Edit_img/music_p.png" /></td>
+
+                            </tr>
+                            <tr>
+                                <td><input name='r' type="radio" data-src="Edit_mp3/1.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td>经典 渔舟唱晚 - 古筝版纯音乐.mp3</td>
+                                <td class="dxcol">80Kb</td>
+                                <td><img src="Edit_img/music_p.png" /></td>
+
+                            </tr>
+                            <tr>
+                                <td><input name='r' type="radio" data-src="Edit_mp3/2.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td>美好 梁祝 - 钢琴版纯音乐.mp3</td>
+                                <td class="dxcol">100Kb</td>
+                                <td><img src="Edit_img/music_p.png" /></td>
+
+                            </tr>
+                            <tr>
+                                <td><input name='r' type="radio" data-src="Edit_mp3/3.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td>经典 渔舟唱晚 - 古筝版纯音乐.mp3 </td>
+                                <td class="dxcol">100Kb</td>
+                                <td><img src="Edit_img/music_p.png" /></td>
+
+                            </tr>
+                            <tr>
+                                <td><input name='r' type="radio" data-src="Edit_mp3/4.mp3" /><input name="mscSel" type="checkbox" value="" /></td>
+                                <td>美好 梁祝 - 钢琴版纯音乐.mp3</td>
+                                <td class="dxcol">100Kb</td>
+                                <td><img src="Edit_img/music_p.png" /></td>
+                            </tr>
+                        </table>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="manu" style="margin-top:12px;"><span class="disabled"> <  首页</span><span class="disabled"> <  上一页</span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a>...<a href="#?page=200">200</a><a href="#?page=2">下一页  > </a></div>
+                <div class="upload"><a href="#">上传音乐</a></div>
+                <div class="qrxz"><a onclick="confirmMsc()">确认选择</a></div>
+                <div class="delpic el_hide"><a>删除选中</a></div><!--20151216  增加该div-->
+            </ol>
+        </div></ol>
+    </div>
+    </div>
+    <!--更换音乐弹窗结束-->
+    <!--设置弹出窗口开始-->
+    <div id="edit_config" class="edit_config panel el_hide" style="position: absolute; right: 130px; top: 136px;">
+        <ul id="myTab8" class="tab">
+            <li class="current" onclick="nTabs(this,0);">设置</li>
+        </ul>
+        <div class="content">
+            <ol id="myTab8_Content0">
+                <table width="400" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <div class="l" onclick="showFMReplaceDialog()"><a><img id="fengMian" src="Edit_img/ad10.jpg" width="100%" height="100%" /></a><div class="gh">更换封面</div></div>
+                            <div class="r">
+                                <input id="sceneTitle" type="text" class="input10" placeholder="标题" />
+                                <textarea id="sceneDesc" class="input11" placeholder="描述"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">选择分类</div>
+                                <div class="r">
+                                    <select name="fenlei3" id="fenlei3">
+                                        <option value="个人" selected="selected">个人</option>
+                                        <option value="企业">企业</option>
+                                        <option value="行业">行业</option>
+                                        <option value="品牌">品牌</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">选择音乐</div>
+                                <div class="r">
+                                    <div id="mscName" class="mscName" style="cursor: pointer;" onclick="showMscReplaceDialog()">我相信.mp3</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">翻页方式</div>
+                                <div class="r">
+                                    <!--20160123 修改select里面的value值-->
+                                    <select name="fenlei5" id="fenlei5">
+                                        <option value="1" selected="selected">上下翻页</option>
+                                        <option value="2">左右翻页</option>
+                                        <option value="3">上下翻惯性页</option>
+                                        <option value="4">左右惯性翻页</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!--20160123 增加以下tr 设置自动播放-->
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">自动翻页</div>
+                                <div class="r">
+                                    <div style="padding-left:20px;display:inline-block;">
+                                        <input type="checkbox" name="autoplay" id="autoplaySwitch" style="float: left; margin-top: 10px; height: 15px; width: 15px;" onchange="$('#autoSpeed').toggle()" />
+                                        <label for="autoplaySwitch">&nbsp;&nbsp;开启</label>
+                                    </div>
+                                    <div id="autoSpeed" style="width: 120px; float: right; position: relative; display: none;">
+                                        <input id="autoTime" type="number" value="3" min="1" max="60" style="width: 125px; height: 19px; padding: 7px 20px; line-height: 1.5; border: none; float: right; padding-right: 15px; border-left: 1px solid #eee;" />
+                                        <span style=" position: absolute; top: 0; left: 70px; line-height: 36px;">秒</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="borradius">
+                                <div class="l">谁可以看</div><div class="r">
+                                    <select name="fenlei6" id="fenlei6">
+                                        <option value="所有人" selected="selected">所有人</option>
+                                        <option value="仅自己">仅自己</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--修改了td 20151215-->
+                        <td style="padding-bottom:0px; text-align:center"><input type="submit" class="imginput1" value="确认提交" onclick="submitSetting()" /></td>
+                    </tr>
+
+                </table>
+            </ol>
+        </div>
+    </div>
+    <!--设置弹窗窗口结束-->
+    <!--弹出层信息提示-->
+    <div id="infotc_del_1" class="infotc el_hide" style="margin:0px auto;">
+        <div class="close" onclick="closeDialogAndMask('infotc_del_1')"></div>
+        <div class="pic1"></div>
+        <h1>确定删除此场景页面？</h1>
+        <h2>删除此场景后，页面内容将不可恢复</h2>
+        <div class="qrxx"><a href="#">确认删除</a></div>
+    </div>
+    <div id="infotc_del_2" class="infotc el_hide" style="margin:0px auto;">
+        <div class="close" onclick="closeDialogAndMask('infotc_del_2')"></div>
+        <div class="pic2"></div>
+        <h1>确定删除此场景页面？</h1>
+        <h2>删除此场景后，页面内容将不可恢复</h2>
+        <div class="qrxx"><a href="#">确认删除</a></div>
+    </div>
+    <!--20151015 修改-->
+    <div id="infotc_del_3" class="infotc el_hide" style="margin:0px auto;">
+        <div class="close" onclick="closeDialogAndMask('infotc_del_3')"></div>
+        <div class="pic1"></div>
+        <h1>应用模板会覆盖当前编辑区，是否继续？</h1>
+        <h2>该操作不可恢复</h2>
+        <div class="qrxx"><a href="#">确认应用</a></div>
+    </div>
+    <!--20151215 修改-->
+    <div id="infotc_del_4" class="infotc el_hide" style="position: absolute; left: 50%; top: 135px; margin-left: -200px; width: 400px; height: 270px; z-index: 10000; ">
+        <div class="close"></div>
+        <div class="pic1"></div>
+        <h1>确定删除此分组？</h1>
+        <div class="qrxx"><a href="#">确定</a></div>
+    </div>
+    <!--给图片添加超链弹窗 20160123 增加-->
+    <div id="addImgLink" class="infotc el_hide" style="margin: 0px auto; width: 500px; height: 280px;">
+        <div class="close" onclick="closeDialogAndMask('addImgLink')"></div>
+        <div style="padding: 12px 20px; background-color: #f7f7f7; "><h1 style="text-align:left;">添加链接</h1></div>
+        <div style="width:100%;text-align:center;margin:50px auto;">
+            <span>网站地址：</span>
+            <input type="text" name="imgLinkInput" id="imgLinkInput" value="http://" style="height: 35px; width: 300px; border-radius: 3px; font-size: 14px; border: 1px solid #ccd5db; padding: 0 6px; " /><br /><br />
+            <span id="linkError" style="color:red;display:none;">网址格式不正确</span>
+        </div>
+        <div class="qrxx" onclick="addImgLink()"><a href="javascript:void(0)">确认添加</a></div>
+    </div>
+    <!--添加视频弹窗 20160123 增加-->
+    <div id="addVideo" class="infotc el_hide" style="margin: 0px auto; padding-bottom: 30px;">
+        <div class="close" onclick="closeDialogAndMask('addVideo')"></div>
+        <div style="padding: 12px 20px; background-color: #f7f7f7; "><h1 style="text-align:left;">视频</h1></div>
+        <div class="video_console" style="margin-top:30px;">
+            <div class="modify_area" style="height:auto">
+                <div class="video_tip">
+                    <span>视频通用代码：</span>
+                    <span class="video_code"><a href="help/help-video.html" target="_blank"><ins>什么是视频通用代码？</ins></a></span>
+                </div>
+                <div class="video_tip">
+                    <textarea style="border-radius:0px" class="video_src" id="video_src"></textarea>
+                </div>
+                <div class="video_tip">
+                    <span>将视频的通用代码粘贴到文本框里即可。</span>
+                    <span id="videoError" style="color:red;display:none;">视频格式不正确</span>
+                </div>
+                <div class="video_tip">
+                    <span>支持的视频：</span><a href="http://www.youku.com/" target="_blank"><ins>优酷</ins></a>、<a href="http://www.tudou.com/" target="_blank"><ins>土豆</ins></a>、<a href="http://v.qq.com/" target="_blank"><ins>腾讯视频</ins></a>
+                </div>
+            </div>
+        </div>
+        <div class="qrxx"><a href="javascript:void(0)">确定</a></div>
+    </div>
+    <!--添加输入框弹窗 20160123 增加-->
+    <div id="addInput" class="infotc el_hide" style="margin: 0px auto;height:360px;">
+        <div class="close" onclick="closeDialogAndMask('addInput')"></div>
+        <div style="padding: 12px 20px; background-color: #f7f7f7; "><h1 style="text-align:left;">输入框组件</h1></div>
+        <div class="" style="margin-top:0px;">
+            <div class="dialog-contain">
+                <div style="width:475px;height:35px;margin: 60px auto;">
+                    <label class="dialog-label">输入框名称：</label>
+                    <div class="dialog-input">
+                        <input id="input-name" style="" type="text" value="请输入" />
+                    </div>
+                    <div class="radio-contain">
+                        <input type="radio" name="input-type" id="radio-501" data-type="501" checked="checked" /><label for="radio-501">文本</label>
+                        <input type="radio" name="input-type" id="radio-502" data-type="502" /><label for="radio-502">姓名</label>
+                        <input type="radio" name="input-type" id="radio-503" data-type="503" /><label for="radio-503">手机</label>
+                        <input type="radio" name="input-type" id="radio-504" data-type="504" /><label for="radio-504">邮箱</label>
+                    </div>
+                </div>
+                <div style="width:470px;height:35px;margin: 60px auto;">
+                    <label class="dialog-label">输入框颜色：</label>
+                    <div class="color-contain">
+                        <span class="selected"><a style="background-color:rgb(8, 161, 239); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(255, 255, 255); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(246, 178, 35); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(51, 51, 51); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(160, 216, 107); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(255, 102, 102); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="qrxx"><a href="javascript:void(0)">确定</a></div>
+    </div>
+    <!--添加提交按钮弹窗 20160123 增加-->
+    <div id="addSubmitBtn" class="infotc el_hide" style="margin: 0px auto;height:360px;">
+        <div class="close" onclick="closeDialogAndMask('addSubmitBtn')"></div>
+        <div style="padding: 12px 20px; background-color: #f7f7f7; "><h1 style="text-align:left;">提交按钮</h1></div>
+        <div class="" style="margin-top:0px;">
+            <div class="dialog-contain">
+                <div style="width:475px;height:35px;margin: 60px auto;">
+                    <label class="dialog-label">按钮名称：</label>
+                    <div class="dialog-input">
+                        <input id="submit-name" style="" type="text" value="提交信息" />
+                    </div>
+                </div>
+                <div style="width:470px;height:35px;margin: 60px auto;">
+                    <label class="dialog-label">按钮颜色：</label>
+                    <div class="color-contain">
+                        <span class="selected"><a style="background-color:rgb(8, 161, 239); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(255, 255, 255); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(246, 178, 35); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(51, 51, 51); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(160, 216, 107); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(255, 102, 102); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="qrxx"><a href="javascript:void(0)">确定</a></div>
+    </div>
+    <!--添加一键拨号弹窗 20160123 增加-->
+    <div id="addTelBtn" class="infotc el_hide" style="margin: 0px auto;height:360px;">
+        <div class="close" onclick="closeDialogAndMask('addTelBtn')"></div>
+        <div style="padding: 12px 20px; background-color: #f7f7f7; "><h1 style="text-align:left;">电话组件</h1></div>
+        <div class="" style="margin-top:0px;">
+            <div class="dialog-contain">
+                <div style="width:475px;height:35px;margin: 35px auto;">
+                    <label class="dialog-label">按钮名称：</label>
+                    <div class="dialog-input">
+                        <input id="telBtn-name" style="" type="text" value="一键拨号" />
+                        <div class="error-info">按钮名称不能为空</div>
+                    </div>
+                </div>
+                <div style="width:475px;height:35px;margin: 3px auto;">
+                    <label class="dialog-label">手机 | 电话：</label>
+                    <div class="dialog-input">
+                        <input id="telBtn-number" style="" type="text" placeholder="010-88888888" />
+                        <div class="error-info">电话号码不能为空</div>
+                    </div>
+                </div>
+                <div style="width:470px;height:35px;margin: 35px auto;">
+                    <label class="dialog-label">按钮颜色：</label>
+                    <div class="color-contain">
+                        <span class="selected"><a style="background-color:rgb(8, 161, 239); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(255, 255, 255); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(246, 178, 35); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(51, 51, 51); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(160, 216, 107); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                        <span><a style="background-color:rgb(255, 102, 102); " onclick="changeSelectedColor(this)" class="color-quik"></a></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="qrxx"><a href="javascript:void(0)">确定</a></div>
+    </div>
+    <!--单击(左右单击)菜单 20151215-->
+    <ul id="popMenu" class="dropdown-menu" style="min-width: 150px; display: none; position: absolute;left:100px;top:100px;-webkit-user-select: none; z-index: 10001;" role="menu" aria-labelledby="dropdownMenu1">
+        <li class="edit" onclick="popMenu_Edit()"><a role="menuitem" tabindex="-1"><i class="fa fa-edit"></i>&nbsp;&nbsp;&nbsp;&nbsp;编辑</a></li>
+        <li class="style" onclick="popMenu_Style()"><a role="menuitem" tabindex="-1"><i class="fa fa-bars"></i>&nbsp;&nbsp;&nbsp;&nbsp;样式</a></li>
+        <li class="animation" onclick="popMenu_Animate()"><a role="menuitem" tabindex="-1"><i class="fa fa-cube"></i>&nbsp;&nbsp;&nbsp;&nbsp;动画</a></li>
+        <li class="link" onclick="popMenu_Link()"><a role="menuitem" tabindex="-1"><i class="fa fa-link"></i>&nbsp;&nbsp;&nbsp;&nbsp;链接</a></li>
+        <li class="copy" onclick="popMenu_Copy()"><a role="menuitem" tabindex="-1"><i class="fa fa-copy"></i>&nbsp;&nbsp;&nbsp;&nbsp;复制</a></li>
+        <li class="paste" onclick="popMenu_Paste()"><a role="menuitem" tabindex="-1"><i class="fa fa-paste"></i>&nbsp;&nbsp;&nbsp;&nbsp;粘贴</a></li>
+        <li class="cut" onclick="popMenu_Cut()"><a role="menuitem" tabindex="-1"><i class="fa fa-cut"></i>&nbsp;&nbsp;&nbsp;&nbsp;裁切</a></li>
+        <li class="delete" onclick="popMenu_Delete()"><a role="menuitem" tabindex="-1"><i class="fa fa-trash-o fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;删除</a></li>
+        <li class="bottom_bar">
+            <a title="置顶" onclick="popMenu_ToTop()">置顶</a>
+            <a title="上移一层" onclick="popMenu_ToUp()">上移</a>
+            <a title="下移一层" onclick="popMenu_ToDown()">下移</a>
+            <a title="置底" onclick="popMenu_ToBottom()">置底</a>
+        </li>
+    </ul>
+    <style>
+    </style>
+
+    <!--文字编辑的工具栏 20151215-->
+    <div id="btn-toolbar" class="btn-toolbar" data-role="editor-toolbar" data-target="#editor" style="position: absolute; left: 50%; margin-left: -242px;width: auto; background: #fff; box-shadow: 0 3px 7px rgba(0,0,0,0.3); border-radius: 4px; z-index: 1000; display: none;">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" title="字体大小"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a data-edit="fontSize 7"><font size="1">48px</font></a></li>
+                <li><a data-edit="fontSize 6"><font size="1">32px</font></a></li>
+                <li><a data-edit="fontSize 5"><font size="1">24px</font></a></li>
+                <li><a data-edit="fontSize 4"><font size="1">18px</font></a></li>
+                <li><a data-edit="fontSize 3"><font size="1">16px</font></a></li>
+                <li><a data-edit="fontSize 2"><font size="1">13px</font></a></li>
+                <li><a data-edit="fontSize 1"><font size="1">12px</font></a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" title="文字颜色"><i class="fa fa-font"></i>&nbsp;<b class="caret"></b></a>
+            <ul class="dropdown-menu color-menu ng-scope">
+                <li><a data-edit="foreColor #000000" style="background-color: #000000"></a></li>
+                <li><a data-edit="foreColor #7e2412" style="background-color: #7e2412"></a></li>
+                <li><a data-edit="foreColor #ff5400" style="background-color: #ff5400"></a></li>
+                <li><a data-edit="foreColor #225801" style="background-color: #225801"></a></li>
+                <li><a data-edit="foreColor #0c529e" style="background-color: #0c529e"></a></li>
+                <li><a data-edit="foreColor #333333" style="background-color: #333333"></a></li>
+                <li><a data-edit="foreColor #b61b52" style="background-color: #b61b52"></a></li>
+                <li><a data-edit="foreColor #f4711f" style="background-color: #f4711f"></a></li>
+                <li><a data-edit="foreColor #3bbc1e" style="background-color: #3bbc1e"></a></li>
+                <li><a data-edit="foreColor #23a3d3" style="background-color: #23a3d3"></a></li>
+                <li><a data-edit="foreColor #888888" style="background-color: #888888"></a></li>
+                <li><a data-edit="foreColor #d34141" style="background-color: #d34141"></a></li>
+                <li><a data-edit="foreColor #f7951e" style="background-color: #f7951e"></a></li>
+                <li><a data-edit="foreColor #29b16a" style="background-color: #29b16a"></a></li>
+                <li><a data-edit="foreColor #97daf3" style="background-color: #97daf3"></a></li>
+                <li><a data-edit="foreColor #cccccc" style="background-color: #cccccc"></a></li>
+                <li><a data-edit="foreColor #ec7c7c" style="background-color: #ec7c7c"></a></li>
+                <li><a data-edit="foreColor #fdea02" style="background-color: #fdea02"></a></li>
+                <li><a data-edit="foreColor #79c450" style="background-color: #79c450"></a></li>
+                <li><a data-edit="foreColor #563679" style="background-color: #563679"></a></li>
+                <li><a data-edit="foreColor #ffffff" style="background-color: #ffffff"></a></li>
+                <li><a data-edit="foreColor #ffcccc" style="background-color: #ffcccc"></a></li>
+                <li><a data-edit="foreColor #d9ef7f" style="background-color: #d9ef7f"></a></li>
+                <li><a data-edit="foreColor #c3f649" style="background-color: #c3f649"></a></li>
+                <li>
+                    <a class="btn glyphicon glyphicon-remove" data-edit="foreColor transparent" style="background-color: transparent">
+                        <img src="Edit_img/13.gif" style=" width: 80%; height: 80%; margin-top: 10%;" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" title="文字背景颜色"><i class="fa fa-font bgcolor-btn"></i>&nbsp;<b class="caret"></b></a>
+            <ul class="dropdown-menu bgcolor-menu ng-scope">
+                <li><a data-edit="backColor rgba(0,0,0, 0.3)" style="background-color: rgba(0,0,0, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(126,36,18, 0.3)" style="background-color: rgba(126,36,18, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(255,84,0, 0.3)" style="background-color: rgba(255,84,0, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(34,88,1, 0.3)" style="background-color: rgba(34,88,1, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(12,82,158, 0.3)" style="background-color: rgba(12,82,158, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(51,51,51, 0.3)" style="background-color: rgba(51,51,51, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(182,27,82, 0.3)" style="background-color: rgba(182,27,82, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(244,113,31, 0.3)" style="background-color: rgba(244,113,31, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(59,188,30, 0.3)" style="background-color: rgba(59,188,30, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(35,163,211, 0.3)" style="background-color: rgba(35,163,211, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(136,136,136, 0.3)" style="background-color: rgba(136,136,136, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(211,65,65, 0.3)" style="background-color: rgba(211,65,65, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(247,149,30, 0.3)" style="background-color: rgba(247,149,30, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(41,177,106, 0.3)" style="background-color: rgba(41,177,106, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(151,218,243, 0.3)" style="background-color: rgba(151,218,243, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(204,204,204, 0.3)" style="background-color: rgba(204,204,204, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(236,124,124, 0.3)" style="background-color: rgba(236,124,124, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(253,234,2, 0.3)" style="background-color: rgba(253,234,2, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(121,196,80, 0.3)" style="background-color: rgba(121,196,80, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(86,54,121, 0.3)" style="background-color: rgba(86,54,121, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(255,255,255, 0.3)" style="background-color: rgba(255,255,255, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(255,204,204, 0.3)" style="background-color: rgba(255,204,204, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(217,239,127, 0.3)" style="background-color: rgba(217,239,127, 0.3)"></a></li>
+                <li><a data-edit="backColor rgba(195,246,73, 0.3)" style="background-color: rgba(195,246,73, 0.3)"></a></li>
+                <li>
+                    <a class="btn glyphicon glyphicon-remove" data-edit="backColor transparent" style="background-color: transparent">
+                        <img src="Edit_img/13.gif" style=" width: 80%; height: 80%; margin-top: 10%;" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <a class="btn" data-edit="bold" title="加粗 (Ctrl+B)"><i class="fa fa-bold"></i></a>
+        </div>
+        <div class="btn-group">
+            <a class="btn" title="增大行间距" onclick="lineHeightUp()"><i class="fa fa-outdent"></i></a>
+            <a class="btn" title="减小行间距" onclick="lineHeightDown()"><i class="fa fa-indent"></i></a>
+        </div>
+        <div class="btn-group">
+            <a class="btn" title="左对齐 (Ctrl+L)" onclick="textAlign('left')"><i class="fa fa-align-left"></i></a>
+            <a class="btn" title="居中 (Ctrl+E)" onclick="textAlign('center')"><i class="fa fa-align-center"></i></a>
+            <a class="btn" title="右对齐 (Ctrl+R)" onclick="textAlign('right')"><i class="fa fa-align-right"></i></a>
+        </div>
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" title="超链接：先选中需要添加链接的文字"><i class="fa fa-link"></i></a>
+            <div class="dropdown-menu input-append" style="padding:5px;" onclick="">
+                <input class="span3" type="text" placeholder="请输入链接地址" data-edit="createLink" style="border-radius:0px;width:200px;height:30px;line-height:30px;border:1px solid #E7E7E7;padding:0 6px;" />
+                <button class="btn" type="button">添加</button>
+            </div>
+            <a class="btn" data-edit="unlink" title="取消超链接"><i class="fa fa-unlink"></i></a>
+        </div>
+        <div class="btn-group">
+            <a class="btn" data-edit="RemoveFormat" title="清除样式"><i class="fa fa-eraser"></i></a>
+        </div>
+    </div>
+
+
+    <!--设置中间容器的高度 20151123-->
+    <script>
+        $(function () {
+            setEditHeight()
+            window.onresize = setEditHeight;
+        });
+        function setEditHeight() {
+            var winH = $(window).height();
+            $(".Edit_main").height(winH - 105);
+            var docH = $(document).height();
+            var maxH = Math.max(winH, docH);
+            $(".Edit_main").height(docH - 105);
+        }
+    </script>
+
+    <!--tab-->
+    <script type="text/javascript">
+        function nTabs(thisObj, Num) {
+            if (thisObj.className == "current") return;
+            var tabObj = thisObj.parentNode.id;
+            var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+            for (i = 0; i < tabList.length; i++) {
+                if (i == Num) {
+                    thisObj.className = "current";
+                    document.getElementById(tabObj + "_Content" + i).style.display = "block";
+                } else {
+                    tabList[i].className = "";
+                    document.getElementById(tabObj + "_Content" + i).style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            //$('#radiolist_2').hradio();
+        });
+    </script>
+    <!--下拉菜单的弹窗-->
+    <script src="js/popModal.js"></script>
+    <script>
+        $(function () {
+
+            $('#popModal_ex2').click(function () {
+                $('#popModal_ex2').popModal({
+                    html: $('#content1'),
+                    placement: 'bottomLeft',
+                    showCloseBut: true,
+                    onDocumentClickClose: true,
+                    onOkBut: function () { },
+                    onCancelBut: function () { },
+                    onLoad: function () { },
+                    onClose: function () { }
+                });
+            });
+        });
+    </script>
+    <script>
+        //$(function () {
+        //    $("a").click(function () {
+        //        $(this).closest('#c1').hide();
+        //    });
+        //});
+    </script>
+
+
+    <script type="text/javascript">
+
+        //$(document).ready(function () {
+        //    $("#page form li:odd").addClass("even");
+        //});
+
+    </script>
+    <!-- 左侧菜单js 20151105-->
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        //该页面左侧导航改为点击显示
+        $(function () {
+            $('.custom-nav > li').unbind('mouseenter');//.unbind('mouseleave');
+            $('.menu-list > a').click(function () {
+                if ($('body').hasClass('left-side-collapsed'))
+                    $(this).parent().toggleClass('nav-hover');
+            });
+        });
+    </script>
+</body>
+</html>

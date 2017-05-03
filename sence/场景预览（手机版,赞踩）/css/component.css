@@ -1,0 +1,18 @@
+*{margin:0;padding:0}
+.la-anim-6 svg{position:fixed;top:50%;left:50%;z-index:-1;display:block;width:500px;height:500px;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);pointer-events:none}
+.la-anim-6.la-animate svg{z-index:100}
+#la-anim-6-loader{fill:#fff;fill-opacity:.05}
+#la-anim-6-border{fill:#000;fill-opacity:.05}
+html,body{height:100%}
+.loadingMask{background:#112843;height:100%;position:relative;z-index:99999;}
+figure{position:absolute;margin:auto;top:0;bottom:0;left:0;right:0;width:4.250em;height:4.250em;-webkit-animation:rotate 2.4s linear infinite}
+.white{top:0;bottom:0;left:0;right:0;background:white;-webkit-animation:flash 2.4s linear infinite;opacity:0}
+.dot{position:absolute;margin:auto;width:1.8em;height:1.8em;border-radius:100%;-webkit-transition:all 1s ease;line-height:1.8em;text-align:center;color:#fff;font-size:14px}
+.dot:nth-child(2){top:0;bottom:0;left:0;background:#f44;-webkit-animation:dotsY 2.4s linear infinite;content:"z"}
+.dot:nth-child(3){left:0;right:0;top:0;background:#fb3;-webkit-animation:dotsX 2.4s linear infinite;content:"z"}
+.dot:nth-child(4){top:0;bottom:0;right:0;background:#9c0;-webkit-animation:dotsY 2.4s linear infinite;content:"z"}
+.dot:nth-child(5){left:0;right:0;bottom:0;background:#33b5e5;-webkit-animation:dotsX 2.4s linear infinite;content:"z"}
+@-webkit-keyframes rotate{0%{-webkit-transform:rotate(0)}10%{width:4.250em;height:4.250em}66%{width:1.8em;height:1.8em}100%{-webkit-transform:rotate(360deg);width:4.250em;height:4.250em}}
+@-webkit-keyframes dotsY{66%{opacity:.1;width:1.8em}77%{opacity:1;width:1.8em}}
+@-webkit-keyframes dotsX{66%{opacity:.1;height:1.8em}77%{opacity:1;height:1.8em}}
+@-webkit-keyframes flash{33%{opacity:0;border-radius:0}55%{opacity:.6;border-radius:100%}66%{opacity:0}}

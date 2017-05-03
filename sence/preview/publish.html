@@ -1,0 +1,223 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>发布</title>
+    <link rel="stylesheet" href="../css/public.css" type="text/css" />
+    <!--<link rel="stylesheet" href="../Edit_css/Edit.css" type="text/css" />-->
+    <style>
+        body {
+            background-color: transparent;
+            overflow: hidden;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+            body * {
+                user-select: none;
+                -webkit-user-select: none;
+            }
+    </style>
+
+    <link href="css/swiper.min.css" rel="stylesheet" />
+    <link href="css/swiper.animate.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <!--滑动、动画-->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <!--自定义js，初始化的操作-->
+    <!--<script src="js/index.js"></script>-->
+    <!--音乐-->
+    <link href="css/bg_music.css" rel="stylesheet" />
+    <script src="js/bg_music.js"></script>
+    <!--视频 20160123-->
+    <script src="js/myVideo.js"></script>
+    <style>
+        @-webkit-keyframes zoomUp {
+            0% {
+                -webkit-transform: scale(1);
+            }
+
+            100% {
+                -webkit-transform: scale(1.5);
+            }
+        }
+
+        @keyframes zoomUp {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.5);
+            }
+        }
+
+        @-webkit-keyframes zoomDown {
+            0% {
+                -webkit-transform: scale(1.5);
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+
+        @keyframes zoomDown {
+            0% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .swiper-slide-active .zoomDown {
+            -webkit-animation: zoomDown 7s ease 1s both;
+            animation: zoomDown 7s ease 1s both;
+        }
+
+        .swiper-slide-active .zoomUp {
+            -webkit-animation: zoomUp 7s ease 1s both;
+            animation: zoomUp 7s ease 1s both;
+        }
+    </style>
+</head>
+
+<body style="background:#f0f0f0">
+    <div id="previewBox" style="width:320px;height:486px;position:relative;">
+        <div class="swiper-container" id="swiper-container">
+            <div class="swiper-wrapper">
+
+                <!------------------------------------------第一页---------------------------------------------------------------->
+                <div class="swiper-slide">
+                    <!--背景图-->
+                    <div class="page-background zoomDown" bg-url="images/bg_sc06.jpg" style="background-image: url(images/bg_sc06.jpg); "></div>
+                    <!--元素1-->
+                    <div class="el-box" style="width: 230px; height: 120px; position: absolute; left: 50px; top: 300px; z-index: 1;">
+                        <div class="el-box-mid ani" swiper-animate-effect="flipInY" swiper-animate-duration="2s" swiper-animate-delay="0.5s" swiper-animate-count="1">
+                            <div id="1002" class="el-box-contents" ctype="2" style="line-height: 2; font-size: 14px; color: rgb(186, 65, 65); border:1px solid;" contenteditable="true">
+                                大家好!我叫贺谦,不要以为我是个男孩子啊,我可是个可爱的小女生哦,来源于“谦受益，,满招损”,爸爸妈妈希望我在谦虚中不断成长进步!
+                            </div>
+                        </div>
+                    </div>
+                    <!--元素2-->
+                    <div class="el-box" style="width: 200px; height: 250px; position: absolute; left: 60px; top: 20px; z-index: 2;transform:rotateZ(0deg)">
+                        <div class="el-box-mid ani" style="border:5px solid rgba(255,0,0,1);" swiper-animate-effect="bounce" swiper-animate-duration="1s" swiper-animate-delay="0s" swiper-animate-count="infinite">
+                            <div id="1001" class="el-box-contents" ctype="1">
+                                <img src="images/ad5.jpg" style="width:100%;height:100%;" />
+                                <a href="http:www.baidu.com" class="imgLink"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--元素3-->
+                    <div class="el-box" style="width: 50px; height: 50px; position: absolute; left: 135px; top: 215px; z-index: 3;">
+                        <div class="el-box-mid ani"swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s" swiper-animate-count="1">
+                            <div id="10001" class="el-box-contents" ctype="3">
+                                <a class="video_btn" videoUrl='<iframe src="http://v.qq.com/iframe/player.html?vid=a0182jckkqa&amp;tiny=0&amp;auto=0" frameborder="0" width="100%" allowfullscreen="" style="position: absolute; min-height: 45%; max-height: 100%; top: 20%;"></iframe>'></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------------------------------第二页---------------------------------------------------------------->
+                <div class="swiper-slide">
+                    <!--背景图-->
+                    <div class="page-background" bg-url="images/bg_sc01.jpg" style="background-image: url(images/bg_sc01.jpg); "></div>
+                    <!--元素1-->
+                    <div class="el-box" style="width: 200px; height: 250px; position: absolute; left: 60px; top: 20px; z-index: 2;">
+                        <div class="el-box-mid ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s" swiper-animate-count="1">
+                            <div id="1001" class="el-box-contents" ctype="1">
+                                <img src="images/a11.jpg" style="width:100%;height:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--元素2-->
+                    <div class="el-box" style="width: 230px; height: 120px; position: absolute; left: 50px; top: 300px; z-index: 1;">
+                        <div class="el-box-mid ani" swiper-animate-effect="flipInY" swiper-animate-duration="2s" swiper-animate-delay="0.5s" swiper-animate-count="1">
+                            <div id="1002" class="el-box-contents" ctype="2" style="line-height: 2;">
+                                大家好!我叫贺谦,不要以为我是个男孩子啊,我可是个可爱的小女生哦,来源于“谦受益，,满招损”,爸爸妈妈希望我在谦虚中不断成长进步!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------------------------------第三页---------------------------------------------------------------->
+                <div class="swiper-slide">
+                    <!--背景图-->
+                    <div class="page-background" bg-url="images/bg_sc03.jpg" style="background-image: url(images/bg_sc03.jpg); "></div>
+                    <!--元素1-->
+                    <div class="el-box" style="width: 200px; height: 250px; position: absolute; left: 60px; top: 20px; z-index: 2;">
+                        <div class="el-box-mid ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s" swiper-animate-count="1">
+                            <div id="1001" class="el-box-contents" ctype="1">
+                                <img src="images/m4.jpg" style="width:100%;height:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--元素2-->
+                    <div class="el-box" style="width: 230px; height: 120px; position: absolute; left: 50px; top: 300px; z-index: 1;">
+                        <div class="el-box-mid ani" swiper-animate-effect="flipInY" swiper-animate-duration="2s" swiper-animate-delay="0.5s" swiper-animate-count="1">
+                            <div id="1002" class="el-box-contents" ctype="2" style="line-height: 2;">
+                                大家好!我叫贺谦,不要以为我是个男孩子啊,我可是个可爱的小女生哦,来源于“谦受益，,满招损”,爸爸妈妈希望我在谦虚中不断成长进步!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <img src="images/arrow.png" id="array" />
+
+        <!--背景音乐begin -->
+        <div id="bgMusicContent">
+            <audio id="bgMusic" src="./assets/mp3/3.mp3" autoplay="autoplay" loop=loop></audio>
+            <div id="mscFont">开启</div>
+            <a class="mscBtn mscPlay" id="audioBtn" title="开关音效"></a>
+            <div id="yinfu"></div>
+        </div>
+        <!--背景音乐end-->
+    </div>
+    <script>
+        $(function () {
+            initPage();
+        });
+
+        window.direction = "vertical";//翻页方式
+        //初始化页面，获取页面json后执行
+        function initPage() {
+            //初始化swiper和动画
+            initSwiper({ 'id': 'swiper-container' });
+            //背景音乐初始化
+            initBgMusic();
+            //视频按钮初始化
+            initVideoShow();
+        }
+        /**
+         * 初始化Swiper
+         **/
+        var mySwiper;
+        function initSwiper(options) {
+            var id = options.id;
+            mySwiper = new Swiper('#' + id, {
+                direction: window.direction,
+                mousewheelControl: true,
+                //autoplay: window.autoPlay > 0 ? window.autoPlay : 0, // 20160123 自动播放
+                autoplayDisableOnInteraction: false,                 // 20160123 自动播放
+                onInit: function (swiper) {
+                    swiperAnimateCache(swiper); //隐藏动画元素
+                    swiperAnimate(swiper); //初始化完成开始动画
+                },
+                onSlideChangeEnd: function (swiper) {
+                    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                },
+                onTransitionEnd: function (swiper) {
+                }
+            });
+        }
+    </script>
+</body>
+</html>

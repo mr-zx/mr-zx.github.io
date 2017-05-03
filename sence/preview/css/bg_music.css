@@ -1,0 +1,21 @@
+#bgMusicContent{position:absolute;right:0;bottom:10px;width:45px;height:45px;filter:alpha(opacity=90);-moz-opacity:.9;-khtml-opacity:.9;opacity:.9;z-index:9999}
+#bgMusicContent a.mscBtn{width:35px;height:35px;background:url(../images/music_off.png);background-size:100%;display:block;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.mscPlay{-webkit-animation:reverseRotataZ 1.2s linear infinite}
+#mscFont{position:absolute;left:-32px;top:8px;font-size:14px;color:white;display:none;}
+#yinfu {position: absolute; left: 10px; top: -45px; width: 30px; height: 50px;}
+@-webkit-keyframes reverseRotataZ{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(-360deg)}}
+#yinfu span{opacity:0}
+.mscfontani{-webkit-animation:show_hide 1.2s linear}
+@-webkit-keyframes show_hide{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.mscAni01{-webkit-animation:mscAni02 1.8s 0s linear infinite}
+.mscAni02{-webkit-animation:mscAni02 2.0s 0.5s linear infinite}
+.mscAni03{-webkit-animation:mscAni02 2.1s 0.5s linear infinite}
+.mscAni04{-webkit-animation:mscAni02 2.2s 1.0s linear infinite}
+.mscAni05{-webkit-animation:mscAni02 2.3s 1.5s linear infinite}
+.mscAni06{-webkit-animation:mscAni02 2.4s 2.0s linear infinite}
+.mscAni07{-webkit-animation:mscAni02 2.5s 2.0s linear infinite}
+.mscAni08{-webkit-animation:mscAni02 2.6s 2.5s linear infinite}
+.mscAni09{-webkit-animation:mscAni02 2.7s 3.0s linear infinite}
+@-webkit-keyframes mscAni01{0%{opacity:1}50%{top:-10px}80%{top:-40px;opacity:0;-webkit-transform:scale(0.3);display:none}100%{top:-50px;opacity:0;-webkit-transform:scale(0.0)}}
+@-webkit-keyframes mscAni02{0%{opacity:0;-webkit-transform:scale(0.6) rotate(-60deg)}30%{-webkit-transform:translateY(-15px) scale(0.5)}45%{opacity:0.5}60%{-webkit-transform:translateY(-30px) scale(0.3)}100%{opacity:0;-webkit-transform:translateY(-60px) scale(0.2)}}
+@-webkit-keyframes mscAni03{0%{opacity:0;-webkit-transform:translateY(0px) scale(0.6) rotate(0deg)}1%{opacity:.7;-webkit-transform:translateY(0px) scale(0.6) rotate(0deg)}50%{opacity:.6;-webkit-transform:translateY(-30px) scale(0.4) rotate(30deg)}80%{opacity:.4;-webkit-transform:translateY(-48px) scale(0.4) rotate(-10deg)}100%{opacity:0;-webkit-transform:translateY(-60px) scale(0.2) rotate(-30deg)}}

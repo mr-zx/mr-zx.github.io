@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>预览</title>
+    <link rel="stylesheet" href="../css/public.css" type="text/css" />
+    <link rel="stylesheet" href="../Edit_css/Edit-2.1.css" type="text/css" />
+    <style>
+        /*这个是新加的 20151105*/
+        body {
+            background-color: transparent;
+            overflow: hidden;
+            background-size: cover !important;
+            -webkit-background-size: cover !important;
+        }
+
+            body * {
+                user-select: none;
+                -webkit-user-select: none;
+            }
+            /*20151215新加*/
+        .btn {
+            cursor: pointer;
+            width: 20px;
+            height: 70px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            left: 50%;
+            background: #2096f9;
+            top: 47px;
+            font-size: 12px;
+            color: #fff;
+            padding: 20px 8px 0;
+            text-align: center;
+            border: 1px solid #2096f9;
+        }    
+    </style>
+    <link href="css/swiper.min.css" rel="stylesheet" />
+    <link href="css/swiper.animate.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <!--滑动、动画-->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <!--自定义js，初始化的操作-->
+    <script src="js/index.js"></script>
+    <!--音乐-->
+    <link href="css/bg_music.css" rel="stylesheet" />
+    <script src="js/bg_music.js"></script>
+    <!--视频 20160123-->
+    <script src="js/myVideo.js"></script>    
+    <!--表单-->
+    <script src="js/myForm.js"></script>
+    
+</head>
+<body style="background:url(../Edit_img/bjtp.jpg);">
+    <div class="phone_panel">
+        <!--右边部分-->
+        <div id="code">
+            <div>扫一扫，分享给朋友！</div>
+            <div class="ewm" id="codeImg"><img src="../Edit_img/ewm.jpg" /></div>
+            <div id="view_share" class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1444617279522">
+                <!--分享-->
+                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></div>
+                <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "24" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                <!--分享-->
+            </div>
+            <div id="view_reg">这么漂亮的场景&nbsp;→<span><a target="_blank" href="#">我也来制作</a></span></div>
+            <div id="support">技术支持 BY <a><img id="logoSmall" src="../Edit_img/blogo.png" /></a></div>
+        </div>
+        <!--左边手机部分-->
+        <div class="p-index main phoneBox" id="con" style="">
+            <div class="top"></div>
+            <div class="phone_menubar"></div>
+            <div class="scene_title_baner"> <div class="scene_title">快来帮我打开时光机！</div></div>
+            <div class="nr">
+                <!--场景 开始-->
+                <div id="previewBox" style="width:320px;height:486px;position:relative;">
+                    <div class="swiper-container" id="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div id="slide_last" class="swiper-slide">
+                                <b>最后一页，系统自动添加，点赞</b>点踩信息
+                            </div>
+                        </div>
+                    </div>
+                    <!--箭头-->
+                    <img id="array" src="images/arrow.png" />
+                    <a id="arrayR" class="u-guidePrev sd-h z-move">next</a>
+                    <a id="arrayL" class="u-guideNext sd-h z-move">prev</a>
+                    <!--背景音乐begin -->
+                    <div id="bgMusicContent" style="top:15px;">
+                        <audio id="bgMusic" autoplay="autoplay" loop=loop></audio>
+                        <div id="mscFont">开启</div>
+                        <a class="mscBtn mscPlay" id="audioBtn" title="开关音效"></a>
+                        <div id="yinfu"></div>
+                    </div>
+                    <!--背景音乐end-->
+                </div>
+                <!--场景 结束-->
+            </div>
+            <div class="bottom"></div>
+        </div>
+        <div class="ctrl_panel"><a id="pre_page" type="button" class="pre_btn btn" onclick="prePage()">上一页</a><a id="next_page" type="button" class="next_btn btn" onclick="nextPage()">下一页</a></div>
+    </div>
+    <script>
+        function prePage() {
+            mySwiper.slidePrev();
+        }
+        function nextPage() {
+            mySwiper.slideNext();
+        }
+    </script>
+</body>
+</html>

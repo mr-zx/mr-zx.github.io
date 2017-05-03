@@ -1,0 +1,38 @@
+﻿
+2.1版本修改说明：
+
+   	1.增加场景自动播放功能
+	2.增加背景图效果（放大、缩小）
+	3.图片可加超链接
+	4.增加视频组件
+	5.增加翻页效果（增加两种）
+	6.增加表单-输入框 
+	7.增加表单-提交按钮
+	8.增加一键拨号功能
+
+以上改动，涉及的文件有：
+  1.PC端：
+	index.html
+	Edit_js / wswm-2.0.js
+	Edit_js / wswm-ajax.js
+	Edit_css / wswm-2.0.css
+	Edit_css / Edit-2.0.css
+	Edit_img / video-btn.png、video-close.png、arr_all.png
+     预览、发布页的：
+	index.js
+	index.css
+	myForm.js (新增，别忘了引入)
+
+  2.手机端：
+	index.js
+	index.css
+	myForm.js (新增，别忘了引入)
+	Edit_img / video-btn.png、video-close.png
+
+
+
+在以上文件中，查找“20160123”即可锁定修改位置
+
+
+
+

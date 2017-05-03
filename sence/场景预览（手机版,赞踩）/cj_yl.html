@@ -1,0 +1,219 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone = no" />
+    <title>预览</title>
+    <link type="text/css" rel="stylesheet" href="images/gr_style.css" />
+    <link type="text/css" rel="stylesheet" href="images/style.css" />
+
+    <link href="css/swiper.min.css" rel="stylesheet" />
+    <link href="css/swiper.animate.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <!--滑动、动画-->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <!--自定义js，初始化的操作-->
+    <script src="js/index.js"></script>
+    <!--音乐-->
+    <link href="css/bg_music.css" rel="stylesheet" />
+    <script src="js/myVideo.js"></script>
+    <!--视频-->
+    <script src="js/bg_music.js"></script>
+    <!--表单-->
+    <script src="js/myForm.js"></script>
+    <!--此Js可控制页面自适应手机浏览器-->
+    <script src="js/viewport320.js"></script>
+    <!--此Js使手机浏览器的active为可用状态-->
+    <script>
+        document.addEventListener("touchstart", function () { }, true);
+    </script>
+
+    <link rel="stylesheet" href="ylmDialog/css/ylmDialog.css" type="text/css" />
+    <script src="ylmDialog/js/ylmDialog-2.0.js"></script>
+
+    <!--旋转加载动画-->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/loading.animate.my.js"></script>
+    <!-- 必须加载微信 JS-SDK 的 JS 文件 -->
+    <script>!window.wx && document.write("<script src=\"https://res.wx.qq.com/open/js/jweixin-1.0.0.js\">" + "</scr" + "ipt>");</script>
+</head>
+<body style="background:#fff;overflow:hidden;">
+    <!--加载完成前动画 begin-->
+    <div id="loadingCtn" class="loadingMask">
+        <div class="la-anim-6">
+            <svg xmlns="1" version="1.1" width="500" height="500" viewbox="0 0 500 500">
+                <path id="la-anim-6-border" />
+                <path id="la-anim-6-loader" />
+            </svg>
+        </div>
+        <figure id="loading" style="">
+            <div class="dot white"></div>
+            <div class="dot">hi</div>
+            <div class="dot">摇</div>
+            <div class="dot">了</div>
+            <div class="dot">么</div>
+        </figure>
+    </div>
+    <script>loadingAni();</script>
+    <!--加载完成前动画 end-->
+
+    <!--头部 开始-->
+    <div class="yl_tx_top" style="position: fixed; left: -160px; top: -25px; width: 640px; z-index: 1000; -webkit-transform: scale(0.5)">
+        <span id="pageNow">1</span>/<span id="pageAll"></span>
+        <a href="" class="yl_top_l"><img src="images/ch_ylfh.png" width="60" height="60" /></a>
+        <!--<a href="" class="yl_top_2"><img src="images/ch_ylyy.png" width="60" height="60" /></a>-->
+    </div>
+    <!--头部 结束-->
+    <!--场景 开始-->
+    <div id="previewBox" style="width:100%;height:100%;position:absolute;left:0px;top:0px;">
+        <div class="swiper-container" id="swiper-container">
+            <div class="swiper-wrapper">
+
+                <div id="slide_last" class="swiper-slide">
+                    <div style="width: 640px; height: 100%; -webkit-transform: scale(0.5) translate(-320px,-284px); ">
+                        <div class="yl_zhbt">哈根达斯冰激淋</div>
+                        <div class="yl_zhx"><img src="images/ch_ylzh.png" /></div>
+                        <div class="yl_zhtx"><img src="images/tx_img.jpg" /></div>
+                        <div class="yl_zhzt">
+                            <div style="float:left;margin:30px 15px 0px 0px;"><a href=""><img src="images/ch_yldz.png" style="width:25px;height:25px;" /></a></div>
+                            <ul>
+                                <li><img src="images/cg_img01.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <li><img src="images/cg_img02.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <li><img src="images/cg_img03.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <li><img src="images/cg_img04.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <li><img src="images/cg_img05.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <div class="clear"></div>
+                            </ul>
+                            <div class="yl_dzs" style="margin-top:20px;"><a href="cj_dz.html">28</a></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="yl_zhzt" style="margin-top:25px;">
+                            <div style="float:left;margin:30px 15px 0px 0px;"><a href=""><img src="images/ch_ylzhc.png" style="width:25px;height:25px;" /></a></div>
+                            <ul>
+                                <li><img src="images/cg_img01.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <li><img src="images/cg_img02.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <li><img src="images/cg_img03.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <li><img src="images/cg_img04.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <li><img src="images/cg_img05.jpg" style="width:84px;height:84px;border-radius:50%;" /></li>
+                                <div class="clear"></div>
+                            </ul>
+                            <div class="yl_cws" style="margin-top:20px;background:#ffa200;"><a href="cj_cw.html">28</a></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="yl_cjan"><a href="">我也要创建</a></div>
+                        <div style="padding:0px 40px 0px;color:#b2b2b2;font-size:23px;">
+                            <span style="float:left;">总计浏览量：<span style="color:#ff2280;">13658956</span><div class="yl_zhck1"><a href="cj_lll.html">查看</a></div></span>
+                            <span style="float:right;">总计分享量：<span style="color:#ffa200;">10568789</span><div class="yl_zhck2"><a href="cj_fxl.html">查看</a></div></span>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="yl_zhdx">免费创建一个场景？→<a href="" style="color:#00cccb;">摇了么</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--箭头-->
+        <img id="array" src="images/arrow.png" />
+        <a id="arrayR" class="u-guidePrev sd-h z-move">next</a>
+        <a id="arrayL" class="u-guideNext sd-h z-move">prev</a>
+
+        <!--背景音乐begin -->
+        <div id="bgMusicContent" style="top:15px;">
+            <audio id="bgMusic" autoplay="autoplay" loop=loop></audio>
+            <div id="mscFont">开启</div>
+            <a class="mscBtn mscPlay" id="audioBtn" title="开关音效"></a>
+            <div id="yinfu"></div>
+        </div>
+        <!--背景音乐end-->
+    </div>
+    <!--场景 结束-->
+    <!--底部 开始-->
+    <div class="yl_db" style="z-index: 1000; -webkit-transition: -webkit-transform 0.5s ease-in; -webkit-transform: translateY(153px) scale(0.5); left: -160px; bottom: -77px;">
+        <div style="margin-top:140px;">
+            <div class="yl_dz">
+                <div style="float:left;margin-right:15px;"><a><img src="images/ch_yldz.png" /></a></div>
+                <div class="yl_dzs"><a href="cj_dz.html">28</a></div>
+                <div class="clear"></div>
+            </div>
+            <div class="yl_cw">
+                <div style="float:left;margin-right:15px;"><a href=""><img src="images/ch_ylcw.png" /></a></div>
+                <div class="yl_cws"><a href="cj_cw.html">28</a></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="yl_dbdb">
+                <div class="yl_rs">12536浏览</div>
+                <div style="width:60px;margin:0 auto;"><img src="images/tx_img.jpg" class="yl_tx" /></div>
+                <div style="position:absolute;right:35px;top:226px;"><a onclick="showFx();"><img src="images/ch_ylfx.png" style="width:60px;height:60px;" /></a></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--底部 结束-->
+    <!--分享 开始-->
+    <div id="container_fx" style="left: -160px; width: 640px; -webkit-transform: translateY(-112px) scale(0.5)">
+        <div class="cj_fx">
+            <ul>
+                <li><a href=""><img src="images/cj_fx1.png" /><br />微信好友</a></li>
+                <li><a href=""><img src="images/cj_fx2.png" /><br />微信朋友圈</a></li>
+                <li><a href=""><img src="images/cj_fx3.png" /><br />QQ好友</a></li>
+                <li><a href=""><img src="images/cj_fx4.png" /><br />QQ空间</a></li>
+                <li><a href=""><img src="images/cj_fx5.png" /><br />新浪微博</a></li>
+                <li><a href=""><img src="images/cj_fx6.png" /><br />腾讯微博</a></li>
+                <li><a href=""><img src="images/cj_fx7.png" /><br />二维码</a></li>
+                <li><a href=""><img src="images/cj_fx8.png" /><br />复制链接</a></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="cj_fxqd"><a href="">确定</a></div>
+    </div>
+    <div id="pageMask" onclick="removeMask()"></div>
+    <!--分享 结束-->
+
+    <script>
+        $(".yl_dz").unbind('click').click(function () {
+            YlmDialog.open({ type: "3", msg: "操作成功啦~~~", timeColse: 10000000 });
+            //YlmDialog.open({
+            //    type: "3",
+            //    msg: "操作成功啦~~~",
+            //    btn: ["确&nbsp;&nbsp;&nbsp;定"],
+            //    btnFun: [
+            //        function () {
+            //            alert("点击了按钮~~");
+            //            YlmDialog.close();
+            //        }
+            //    ]
+            //});
+            //YlmDialog.open({
+            //    type: "1",
+            //    msg: "操作成功啦~~~",
+            //    btn: ["返&nbsp;&nbsp;&nbsp;回", "确&nbsp;&nbsp;&nbsp;定"],
+            //    btnFun: [
+            //        function () {
+            //            alert("点击了第一个按钮~~");
+            //            YlmDialog.close();
+            //        },
+            //        function () {
+            //            alert("点击了第2个按钮~~");
+            //            YlmDialog.close();
+            //        }
+            //    ]
+            //});
+        });
+    </script>
+    <script>
+        $(function () {
+            //显示底部点赞点踩按钮
+            $("#previewBox").click(function () {
+                window.showDbFlag ? hideDb() : showDb();
+            })
+            $(".yl_zhck1 a,.yl_zhck2 a").click(function (e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>
