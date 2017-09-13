@@ -36,36 +36,6 @@
 </head>
 <body>
      <a href="tel:15063065910">一键拨打号码</a>
-    <div class="box"></div>
-    <div class="box2">
-        <a href="award/index.html">抽奖</a>      
-    </div>
-    <script>
-        $('body').on('touchstart', function (e) {
-            var touch = e.originalEvent,
-            startX = touch.changedTouches[0].pageX;
-            startY = touch.changedTouches[0].pageY;
-            return false;
-        }).on('touchend', function (e) {
-            e.preventDefault();
-            var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-            var $box = $('.box');
-            if (touch.pageY - startY > 30) {
-                //console.log("下划");
-                if (!$box.is(':visible')) {
-                    $box.fadeIn();
-                    $('.box2').animate({ 'top': '25%' }, 300);
-                }
-            } else if (touch.pageY - startY < -30) {
-                //console.log("上划");
-                if ($box.is(':visible')) {
-                    $box.fadeOut(300, function () {
-                        $('.box2').animate({ 'top': '0px' }, 300);
-                    });
-                }
-            };
-        });
-
-    </script>
+    
 </body>
 </html>
