@@ -22,11 +22,13 @@
 		o.focus();
 		console.log('focus');
 	}
-	
-	var o = document.getElementById('demo3');
+	setTimeout(function() {
+		var o = document.getElementById('demo3');
 		o.click();
 		o.focus();
-	console.log('focus');
+		console.log('focus3');
+	},500)
+	
 </script>
 
 </html>
