@@ -10,16 +10,14 @@
 	<p>问题的关键在于，<b>点击的元素也应该是一个input</b></p>
 	<input id='demo2' onclick='test()' placeholder='点我看效果'>
 	<br>
-	<input id='demo'>		
+	<input id='demo' style='margin-top:15px;height:30px;'>		
 </body>
 <script>
 	function test(){
-		setTimeout(function() {
-			var o = document.getElementById('demo');
-			o.click();
-			o.focus();
-			console.log('focus');
-		}, 500);
+		var o = document.getElementById('demo');
+		o.click();
+		o.focus();
+		console.log('focus');
 	}
 </script>
 
