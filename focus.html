@@ -7,8 +7,11 @@
 </head>
 <body>
 	<input id='demo'>
+	
+	<input id='demo2' onclick='test()'>
 </body>
 <script>
+	function test(){
 	setTimeout(function() {
 		var o = document.getElementById('demo');
 		o.click();
@@ -20,6 +23,7 @@
 			console.log('focus');
 		}, 500);
 	}, 500);
+	}
 </script>
 
 </html>
