@@ -10,7 +10,10 @@
 	<p>问题的关键在于，<b>点击的元素也应该是一个input</b></p>
 	<input id='demo2' onclick='test()' placeholder='点我看效果'>
 	<br>
-	<input id='demo' style='margin-top:15px;height:30px;'>		
+	<input id='demo' style='margin-top:15px;height:30px;'>	
+	<br>
+	<h3>我一进入就会focus</h3>
+	<input id='demo2' style='margin-top:15px;height:30px;'>	
 </body>
 <script>
 	function test(){
@@ -19,6 +22,11 @@
 		o.focus();
 		console.log('focus');
 	}
+	
+	var o = document.getElementById('demo');
+		o.click();
+		o.focus();
+	console.log('focus');
 </script>
 
 </html>
