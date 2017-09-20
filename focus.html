@@ -2,27 +2,24 @@
 <html>
 
 <head>
-	<title>focus</title>
+	<title>模拟自动弹出输入法</title>
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>	
 </head>
 <body>
-	<input id='demo'>
-	
-	<input id='demo2' onclick='test()'>
+	<h3>模拟点击一个按钮，让input获得焦点，并弹出输入法</h3>
+	<p>问题的关键在于，<b>点击的元素也应该是一个input</b></p>
+	<input id='demo2' onclick='test()' placeholder='点我看效果'>
+	<br>
+	<input id='demo'>		
 </body>
 <script>
 	function test(){
-	setTimeout(function() {
-		var o = document.getElementById('demo');
-		o.click();
-		o.focus();
-		console.log('focus');
 		setTimeout(function() {
+			var o = document.getElementById('demo');
 			o.click();
 			o.focus();
 			console.log('focus');
 		}, 500);
-	}, 500);
 	}
 </script>
 
