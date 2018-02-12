@@ -38,11 +38,17 @@
             text-align: center;
             font-size: 50px;
         }
+
+        .swiper-slide img {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
-    <button onclick="show()">点点点点点点点点点点点点</button>
+    <!-- <div><label>url：</label><input id='url' value="http://img.mmjpg.com/2018/"></div> -->
+    <div><label>num：</label><input id='num' value="1250"></div>
+    <button onclick="show()">点点点点点点点</button>
     <!-- Swiper -->
     <div class="swiper-container" id="swiper-container1">
         <div class="swiper-wrapper">
@@ -52,13 +58,20 @@
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://www.swiper.com.cn/dist/js/swiper.min.js?v=407"></script>
     <script language="javascript">
-        var mySwiper = new Swiper('#swiper-container1')
+        var mySwiper = new Swiper('#swiper-container1', {
+            autoHeight: true,
+            autoplay: {
+                delay: 1000
+            },
+        });
 
         function show() {
+            // var url = $('#url').val();
+            var num = $('#num').val();
             var h = '';
             for (var i = 0; i < 30; i++) {
-                h += '<div class="swiper-slide blue-slide"><img src="http://img.mmjpg.com/2018/1255/' + i +
-                    '.jpg"></div>';
+                h += '<div class="swiper-slide">' +
+                    '<img src="http://img.mmjpg.com/2018/' + num + '/' + i + '.jpg"></div>';
             }
             $('#swiper-container1 .swiper-wrapper').html(h);
             $('#swiper-container1').show();
