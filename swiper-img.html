@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="http://www.swiper.com.cn/dist/css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body:before {
+            content: '';
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            display: none;
+        }
+
+        .swiper-slide {
+            line-height: 300px;
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="show()">点点点点点点点点点点点点</button>
+    <!-- Swiper -->
+    <div class="swiper-container" id="swiper-container1">
+        <div class="swiper-wrapper">
+        </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://www.swiper.com.cn/dist/js/swiper.min.js?v=407"></script>
+    <script language="javascript">
+        var mySwiper = new Swiper('#swiper-container1')
+
+        function show() {
+            var h = '';
+            for (var i = 0; i < 30; i++) {
+                h += '<div class="swiper-slide blue-slide"><img src="http://img.mmjpg.com/2018/1255/' + i +
+                    '.jpg"></div>';
+            }
+            $('#swiper-container1 .swiper-wrapper').html(h);
+            $('#swiper-container1').show();
+            setTimeout(function () {
+                mySwiper.update();
+            }, 200);
+
+        }
+    </script>
+
+</body>
+
+</html>
